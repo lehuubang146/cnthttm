@@ -266,6 +266,8 @@ const MockExam = () => {
               const availableQuestions = Math.min(qCount, questionsData.length);
               const shuffled = [...questionsData].sort(() => 0.5 - Math.random()).slice(0, availableQuestions);
               setQuestions(shuffled);
+              setCurrentQIndex(0);
+              setSelectedAnswers({});
               setIsStarted(true);
               setHasActiveSession(false);
             }}
