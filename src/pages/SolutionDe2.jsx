@@ -265,21 +265,38 @@ const SolutionDe2 = () => {
         
         <div style={solutionBlock}>
           <p><strong>1. Thống kê tham số</strong></p>
-          <ul style={{ listStyleType: 'none', paddingLeft: '1rem' }}>
-            <li>• Xác suất tiền nghiệm: <span style={codeStyle}>P(Yes) = 3/6 = 0.5</span> | <span style={codeStyle}>P(No) = 3/6 = 0.5</span></li>
-            
-            <li style={{ marginTop: '0.5rem' }}><strong>* Xét nhãn lớp YES:</strong></li>
-            <li>• Xác suất Location (Foreign): <span style={codeStyle}>P(Foreign|Yes) = 2/3</span></li>
-            <li>• Amount (Mean μ): <span style={codeStyle}>μ_yes = (45 + 55 + 65) / 3 = 55</span></li>
-            <li>• Amount (Phương sai mẫu σ² chia n-1): <span style={codeStyle}>σ²_yes = ((45-55)² + (55-55)² + (65-55)²) / (3-1) = 200 / 2 = 100</span></li>
-            <li>• Amount (Std Dev σ): <span style={codeStyle}>σ_yes = √100 = 10</span></li>
-            
-            <li style={{ marginTop: '0.5rem' }}><strong>* Xét nhãn lớp NO:</strong></li>
-            <li>• Xác suất Location (Foreign): <span style={codeStyle}>P(Foreign|No) = 1/3</span></li>
-            <li>• Amount (Mean μ): <span style={codeStyle}>μ_no = (5 + 15 + 10) / 3 = 10</span></li>
-            <li>• Amount (Phương sai mẫu σ² chia n-1): <span style={codeStyle}>σ²_no = ((5-10)² + (15-10)² + (10-10)²) / (3-1) = 50 / 2 = 25</span></li>
-            <li>• Amount (Std Dev σ): <span style={codeStyle}>σ_no = √25 = 5</span></li>
-          </ul>
+          <table style={{ width: '100%', marginTop: '0.5rem', borderCollapse: 'collapse', textAlign: 'center', border: '1px solid #cbd5e1' }}>
+            <thead>
+              <tr style={{ backgroundColor: '#f1f5f9', borderBottom: '2px solid #cbd5e1' }}>
+                <th style={{ padding: '0.5rem', border: '1px solid #cbd5e1' }}>Nhãn (Class)</th>
+                <th style={{ padding: '0.5rem', border: '1px solid #cbd5e1' }}>P(Class)</th>
+                <th style={{ padding: '0.5rem', border: '1px solid #cbd5e1' }}>Location (Foreign)</th>
+                <th style={{ padding: '0.5rem', border: '1px solid #cbd5e1' }}>Amount (μ, σ², σ)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style={{ padding: '0.5rem', border: '1px solid #cbd5e1', fontWeight: 'bold' }}>YES</td>
+                <td style={{ padding: '0.5rem', border: '1px solid #cbd5e1' }}>3/6 = 0.5</td>
+                <td style={{ padding: '0.5rem', border: '1px solid #cbd5e1' }}>2/3</td>
+                <td style={{ padding: '0.5rem', border: '1px solid #cbd5e1', textAlign: 'left', lineHeight: '1.6' }}>
+                  μ = (45+55+65) / 3 = 55<br/>
+                  σ² = 200 / 2 = 100<br/>
+                  σ = √100 = 10
+                </td>
+              </tr>
+              <tr>
+                <td style={{ padding: '0.5rem', border: '1px solid #cbd5e1', fontWeight: 'bold' }}>NO</td>
+                <td style={{ padding: '0.5rem', border: '1px solid #cbd5e1' }}>3/6 = 0.5</td>
+                <td style={{ padding: '0.5rem', border: '1px solid #cbd5e1' }}>1/3</td>
+                <td style={{ padding: '0.5rem', border: '1px solid #cbd5e1', textAlign: 'left', lineHeight: '1.6' }}>
+                  μ = (5+15+10) / 3 = 10<br/>
+                  σ² = 50 / 2 = 25<br/>
+                  σ = √25 = 5
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
           <p style={{ marginTop: '1.5rem' }}><strong>2. Tính Likelihood cho giao dịch Q(Foreign, 30)</strong></p>
           <ul style={{ listStyleType: 'none', paddingLeft: '1rem' }}>

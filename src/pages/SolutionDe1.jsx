@@ -236,21 +236,38 @@ const SolutionDe1 = () => {
         
         <div style={solutionBlock}>
           <p><strong>1. Thống kê tham số</strong></p>
-          <ul style={{ listStyleType: 'none', paddingLeft: '1rem' }}>
-            <li>• Xác suất tiền nghiệm: <span style={codeStyle}>P(Yes) = 3/6 = 0.5</span> | <span style={codeStyle}>P(No) = 3/6 = 0.5</span></li>
-            
-            <li style={{ marginTop: '0.5rem' }}><strong>* Xét nhãn lớp YES:</strong></li>
-            <li>• Xác suất Degree (Master): <span style={codeStyle}>P(Master|Yes) = 2/3</span></li>
-            <li>• Test_Score (Mean μ): <span style={codeStyle}>μ_yes = (85 + 90 + 95) / 3 = 90</span></li>
-            <li>• Test_Score (Phương sai mẫu σ² chia n-1): <span style={codeStyle}>σ²_yes = ((85-90)² + (90-90)² + (95-90)²) / (3-1) = 50 / 2 = 25</span></li>
-            <li>• Test_Score (Std Dev σ): <span style={codeStyle}>σ_yes = √25 = 5</span></li>
-            
-            <li style={{ marginTop: '0.5rem' }}><strong>* Xét nhãn lớp NO:</strong></li>
-            <li>• Xác suất Degree (Master): <span style={codeStyle}>P(Master|No) = 1/3</span></li>
-            <li>• Test_Score (Mean μ): <span style={codeStyle}>μ_no = (75 + 70 + 65) / 3 = 70</span></li>
-            <li>• Test_Score (Phương sai mẫu σ² chia n-1): <span style={codeStyle}>σ²_no = ((75-70)² + (70-70)² + (65-70)²) / (3-1) = 50 / 2 = 25</span></li>
-            <li>• Test_Score (Std Dev σ): <span style={codeStyle}>σ_no = √25 = 5</span></li>
-          </ul>
+          <table style={{ width: '100%', marginTop: '0.5rem', borderCollapse: 'collapse', textAlign: 'center', border: '1px solid #cbd5e1' }}>
+            <thead>
+              <tr style={{ backgroundColor: '#f1f5f9', borderBottom: '2px solid #cbd5e1' }}>
+                <th style={{ padding: '0.5rem', border: '1px solid #cbd5e1' }}>Nhãn (Class)</th>
+                <th style={{ padding: '0.5rem', border: '1px solid #cbd5e1' }}>P(Class)</th>
+                <th style={{ padding: '0.5rem', border: '1px solid #cbd5e1' }}>Degree (Master)</th>
+                <th style={{ padding: '0.5rem', border: '1px solid #cbd5e1' }}>Test_Score (μ, σ², σ)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style={{ padding: '0.5rem', border: '1px solid #cbd5e1', fontWeight: 'bold' }}>YES</td>
+                <td style={{ padding: '0.5rem', border: '1px solid #cbd5e1' }}>3/6 = 0.5</td>
+                <td style={{ padding: '0.5rem', border: '1px solid #cbd5e1' }}>2/3</td>
+                <td style={{ padding: '0.5rem', border: '1px solid #cbd5e1', textAlign: 'left', lineHeight: '1.6' }}>
+                  μ = (85+90+95) / 3 = 90<br/>
+                  σ² = 50 / 2 = 25<br/>
+                  σ = √25 = 5
+                </td>
+              </tr>
+              <tr>
+                <td style={{ padding: '0.5rem', border: '1px solid #cbd5e1', fontWeight: 'bold' }}>NO</td>
+                <td style={{ padding: '0.5rem', border: '1px solid #cbd5e1' }}>3/6 = 0.5</td>
+                <td style={{ padding: '0.5rem', border: '1px solid #cbd5e1' }}>1/3</td>
+                <td style={{ padding: '0.5rem', border: '1px solid #cbd5e1', textAlign: 'left', lineHeight: '1.6' }}>
+                  μ = (75+70+65) / 3 = 70<br/>
+                  σ² = 50 / 2 = 25<br/>
+                  σ = √25 = 5
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
           <p style={{ marginTop: '1.5rem' }}><strong>2. Tính Likelihood cho ứng viên N(Master, 80)</strong></p>
           <ul style={{ listStyleType: 'none', paddingLeft: '1rem' }}>
