@@ -100,6 +100,19 @@ const SolutionDe2 = () => {
             <li>• <strong>Với k = 3:</strong> 3 láng giềng gần nhất là KH5(No), KH3(No), KH2(Yes).<br/>→ Tỷ số: No(2) &gt; Yes(1). <strong>Kết luận: No</strong>.</li>
             <li>• <strong>Với k = 5:</strong> 5 láng giềng gần nhất là KH5(No), KH3(No), KH2(Yes), KH4(Yes), KH6(Yes).<br/>→ Tỷ số: Yes(3) &gt; No(2). <strong>Kết luận: Yes</strong>.</li>
           </ul>
+
+          <details style={{ marginTop: '1.5rem', backgroundColor: '#f0f9ff', padding: '1rem', borderRadius: '8px', border: '1px solid #bae6fd' }}>
+            <summary style={{ fontWeight: 'bold', cursor: 'pointer', color: '#0369a1', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              💡 Xem giải thích chi tiết Câu 1
+            </summary>
+            <div style={{ marginTop: '1rem', fontSize: '0.95rem', color: '#334155', lineHeight: '1.6' }}>
+               <p><strong>1. Tại sao phải chuẩn hóa Min-Max Scaling?</strong><br/>Khoảng cách Manhattan rất nhạy cảm với sự chênh lệch đơn vị. Nếu cột <code>Discount</code> lớn hơn hẳn cột <code>Orders</code>, thuật toán sẽ bị thiên vị. Chuẩn hóa Min-Max đưa tất cả về khoảng từ 0 đến 1, giúp hai cột có tiếng nói ngang bằng nhau.</p>
+               <p><strong>2. Công thức Min-Max là gì?</strong><br/><code>P_mới = (P - Min) / (Max - Min)</code>. Ở cột Orders, bé nhất là 5, lớn nhất là 30. Vậy khách hàng mới P (có 15 đơn) sẽ được chuẩn hóa thành <code>(15 - 5) / (30 - 5) = 10 / 25 = 0.4</code>.</p>
+               <p><strong>3. Công thức khoảng cách Manhattan (City Block):</strong><br/><code>d = |x1 - x2| + |y1 - y2|</code>. Khác với Euclidean (đường chim bay), Manhattan tính khoảng cách theo dạng lưới (như đi đường trong thành phố). Bạn lấy trị tuyệt đối hiệu của từng thuộc tính rồi cộng lại.</p>
+               <p><strong>4. Xác định Hạng như thế nào?</strong><br/>Sau khi tính khoảng cách từ P đến 6 KH, bạn sắp xếp khoảng cách từ NHỎ NHẤT đến LỚN NHẤT (0.4 → 0.45 → 0.65 → 0.7 → 0.85 → 0.9) để đánh hạng từ 1 đến 6. KH5 có khoảng cách nhỏ nhất nên xếp hạng 1 (Gần nhất).</p>
+               <p><strong>5. Phân lớp (Voting):</strong><br/>- k=3: Chọn 3 người hạng cao nhất (Hạng 1, 2, 3), đếm xem Yes hay No nhiều hơn. Ở đây 3 người đó có nhãn là No, No, Yes → Số lượng No (2) &gt; Yes (1), nên P mang nhãn No.<br/>- k=5: Chọn 5 người hạng cao nhất, đếm xem Yes hay No nhiều hơn. Ở đây có 3 Yes, 2 No, nên P mang nhãn Yes.</p>
+            </div>
+          </details>
         </div>
       </section>
 
@@ -199,6 +212,18 @@ const SolutionDe2 = () => {
               </div>
             </div>
           </div>
+
+          <details style={{ marginTop: '1.5rem', backgroundColor: '#f0f9ff', padding: '1rem', borderRadius: '8px', border: '1px solid #bae6fd' }}>
+            <summary style={{ fontWeight: 'bold', cursor: 'pointer', color: '#0369a1', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              💡 Xem giải thích chi tiết Câu 2
+            </summary>
+            <div style={{ marginTop: '1rem', fontSize: '0.95rem', color: '#334155', lineHeight: '1.6' }}>
+               <p><strong>1. Tại sao phải tính Entropy?</strong><br/>Entropy là thước đo sự "hỗn loạn" hay "không chắc chắn" của dữ liệu. Nếu 50% Yes và 50% No (cực kỳ lộn xộn), Entropy = 1. Nếu tất cả đều là Yes hoặc tất cả đều là No (tinh khiết), Entropy = 0.<br/>Công thức: <code>-p(yes)*log2(p(yes)) - p(no)*log2(p(no))</code>. Tập dữ liệu S ban đầu có 4 Yes và 4 No nên Entropy(D) bằng đúng 1.0.</p>
+               <p><strong>2. Tại sao dùng Information Gain (Độ lợi thông tin)?</strong><br/>Thuật toán cần biết nên dùng cột nào để làm câu hỏi chia nhánh đầu tiên (Nút gốc). Cột nào giúp tách tập dữ liệu lộn xộn ban đầu thành các nhóm con "tinh khiết" (ít lộn xộn) nhất sẽ có Information Gain lớn nhất.<br/><code>Gain = Entropy(ban đầu) - Entropy(sau khi chia bằng thuộc tính đó)</code>.</p>
+               <p><strong>3. Tại sao chọn Time_Of_Day làm nút gốc?</strong><br/>Khi tính Information Gain, ta thấy <code>Gain(Time_Of_Day) = 0.5488</code> lớn hơn <code>Gain(Vehicle_Type) = 0.1887</code>. Điều này chứng tỏ khi chia dữ liệu theo ngày và đêm, tập dữ liệu thu được tinh khiết hơn rất nhiều so với chia theo loại hình phương tiện. Do đó, Time_Of_Day được chọn làm nút gốc của cây.</p>
+               <p><strong>4. Tại sao lại vẽ sơ đồ cây như thế kia?</strong><br/>Từ Nút gốc (Time_Of_Day), ta chẻ ra 2 nhánh là Day và Night. Ở nhánh Day, ta thấy có 3 mẫu và cả 3 đều là No, tập con này đã thuần nhất 100% (Entropy=0), nên ta đưa ra kết luận ngay (Lá = NO). Ở nhánh Night, dữ liệu vẫn còn lộn xộn (4 Yes, 1 No) nên ta phải ghi rõ cần đặt thêm câu hỏi phụ (Vehicle_Type?) để tiếp tục phân loại.</p>
+            </div>
+          </details>
         </div>
       </section>
 
