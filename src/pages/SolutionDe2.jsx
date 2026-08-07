@@ -81,12 +81,12 @@ const SolutionDe2 = () => {
           <p style={{ marginTop: '1.5rem' }}><strong>2. Tính toán khoảng cách (Manhattan)</strong></p>
           <p style={{ paddingLeft: '1rem', fontStyle: 'italic', marginBottom: '0.5rem' }}>Công thức khoảng cách: <span style={codeStyle}>d = |x1 - x2| + |y1 - y2|</span></p>
           <ul style={{ listStyleType: 'none', paddingLeft: '1rem', lineHeight: '2' }}>
-            <li>• <strong>KH1 (0.0, 0.0):</strong> d = |0.4 - 0.0| + |0.5 - 0.0| = 0.9 &rarr; <strong>Hạng 6</strong> (No)</li>
-            <li>• <strong>KH2 (0.8, 0.75):</strong> d = |0.4 - 0.8| + |0.5 - 0.75| = 0.65 &rarr; <strong>Hạng 3</strong> (Yes)</li>
-            <li style={{ color: '#16a34a', fontWeight: '500', backgroundColor: '#f0fdf4', padding: '0.2rem 0.5rem', borderRadius: '4px' }}>• <strong>KH3 (0.2, 0.25):</strong> d = |0.4 - 0.2| + |0.5 - 0.25| = 0.45 &rarr; <strong>Hạng 2</strong> (No)</li>
-            <li>• <strong>KH4 (0.6, 1.0):</strong> d = |0.4 - 0.6| + |0.5 - 1.0| = 0.7 &rarr; <strong>Hạng 4</strong> (Yes)</li>
-            <li style={{ color: '#16a34a', fontWeight: '500', backgroundColor: '#f0fdf4', padding: '0.2rem 0.5rem', borderRadius: '4px' }}>• <strong>KH5 (0.0, 0.5):</strong> d = |0.4 - 0.0| + |0.5 - 0.5| = 0.4 &rarr; <strong>Hạng 1</strong> (No)</li>
-            <li>• <strong>KH6 (1.0, 0.25):</strong> d = |0.4 - 1.0| + |0.5 - 0.25| = 0.85 &rarr; <strong>Hạng 5</strong> (Yes)</li>
+            <li>• <strong>KH1 (0.0, 0.0):</strong> d = |0.4 - 0.0| + |0.5 - 0.0| = 0.9 → <strong>Hạng 6</strong> (No)</li>
+            <li>• <strong>KH2 (0.8, 0.75):</strong> d = |0.4 - 0.8| + |0.5 - 0.75| = 0.65 → <strong>Hạng 3</strong> (Yes)</li>
+            <li style={{ color: '#16a34a', fontWeight: '500', backgroundColor: '#f0fdf4', padding: '0.2rem 0.5rem', borderRadius: '4px' }}>• <strong>KH3 (0.2, 0.25):</strong> d = |0.4 - 0.2| + |0.5 - 0.25| = 0.45 → <strong>Hạng 2</strong> (No)</li>
+            <li>• <strong>KH4 (0.6, 1.0):</strong> d = |0.4 - 0.6| + |0.5 - 1.0| = 0.7 → <strong>Hạng 4</strong> (Yes)</li>
+            <li style={{ color: '#16a34a', fontWeight: '500', backgroundColor: '#f0fdf4', padding: '0.2rem 0.5rem', borderRadius: '4px' }}>• <strong>KH5 (0.0, 0.5):</strong> d = |0.4 - 0.0| + |0.5 - 0.5| = 0.4 → <strong>Hạng 1</strong> (No)</li>
+            <li>• <strong>KH6 (1.0, 0.25):</strong> d = |0.4 - 1.0| + |0.5 - 0.25| = 0.85 → <strong>Hạng 5</strong> (Yes)</li>
           </ul>
 
           <p style={{ marginTop: '1.5rem' }}><strong>3. Phân lớp</strong></p>
