@@ -72,28 +72,16 @@ const SolutionDe2 = () => {
             <li style={{ marginTop: '0.5rem', color: '#059669', fontWeight: '500' }}>→ P mới (sau chuẩn hóa) = (0.4, 0.5)</li>
           </ul>
 
-          <p style={{ marginTop: '1.5rem' }}><strong>2. Bảng chuẩn hóa dữ liệu & Tính toán khoảng cách (Manhattan)</strong></p>
+          <p style={{ marginTop: '1.5rem' }}><strong>2. Tính toán khoảng cách (Manhattan)</strong></p>
           <p style={{ paddingLeft: '1rem', fontStyle: 'italic', marginBottom: '0.5rem' }}>Công thức khoảng cách: <span style={codeStyle}>d = |x1 - x2| + |y1 - y2|</span></p>
-          <table style={{ width: '100%', marginBottom: '1rem', borderCollapse: 'collapse', textAlign: 'left', border: '1px solid #e2e8f0' }}>
-            <thead>
-              <tr style={{ borderBottom: '2px solid #cbd5e1', backgroundColor: '#f1f5f9' }}>
-                <th style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>Khách hàng</th>
-                <th style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>Orders (Min-Max)</th>
-                <th style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>Discount (Min-Max)</th>
-                <th style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>Khoảng cách d (so với P)</th>
-                <th style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>Hạng</th>
-                <th style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>Subscribe</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>KH1</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.0</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.0</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.9</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>6</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>No</td></tr>
-              <tr><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>KH2</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.8</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.75</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.65</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>3</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>Yes</td></tr>
-              <tr style={{ backgroundColor: '#f0fdf4' }}><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0', fontWeight: 'bold' }}>KH3</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.2</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.25</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0', fontWeight: 'bold', color: '#16a34a' }}>0.45</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0', fontWeight: 'bold' }}>2</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>No</td></tr>
-              <tr><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>KH4</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.6</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>1.0</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.7</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>4</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>Yes</td></tr>
-              <tr style={{ backgroundColor: '#f0fdf4' }}><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0', fontWeight: 'bold' }}>KH5</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.0</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.5</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0', fontWeight: 'bold', color: '#16a34a' }}>0.4</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0', fontWeight: 'bold' }}>1</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>No</td></tr>
-              <tr><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>KH6</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>1.0</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.25</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.85</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>5</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>Yes</td></tr>
-            </tbody>
-          </table>
+          <ul style={{ listStyleType: 'none', paddingLeft: '1rem', lineHeight: '2' }}>
+            <li>• <strong>KH1 (0.0, 0.0):</strong> d = |0.4 - 0.0| + |0.5 - 0.0| = 0.9 &rarr; <strong>Hạng 6</strong> (No)</li>
+            <li>• <strong>KH2 (0.8, 0.75):</strong> d = |0.4 - 0.8| + |0.5 - 0.75| = 0.65 &rarr; <strong>Hạng 3</strong> (Yes)</li>
+            <li style={{ color: '#16a34a', fontWeight: '500', backgroundColor: '#f0fdf4', padding: '0.2rem 0.5rem', borderRadius: '4px' }}>• <strong>KH3 (0.2, 0.25):</strong> d = |0.4 - 0.2| + |0.5 - 0.25| = 0.45 &rarr; <strong>Hạng 2</strong> (No)</li>
+            <li>• <strong>KH4 (0.6, 1.0):</strong> d = |0.4 - 0.6| + |0.5 - 1.0| = 0.7 &rarr; <strong>Hạng 4</strong> (Yes)</li>
+            <li style={{ color: '#16a34a', fontWeight: '500', backgroundColor: '#f0fdf4', padding: '0.2rem 0.5rem', borderRadius: '4px' }}>• <strong>KH5 (0.0, 0.5):</strong> d = |0.4 - 0.0| + |0.5 - 0.5| = 0.4 &rarr; <strong>Hạng 1</strong> (No)</li>
+            <li>• <strong>KH6 (1.0, 0.25):</strong> d = |0.4 - 1.0| + |0.5 - 0.25| = 0.85 &rarr; <strong>Hạng 5</strong> (Yes)</li>
+          </ul>
 
           <p style={{ marginTop: '1.5rem' }}><strong>3. Phân lớp</strong></p>
           <ul style={{ listStyleType: 'none', paddingLeft: '1rem' }}>

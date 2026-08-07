@@ -80,28 +80,16 @@ const SolutionDe1 = () => {
             <li style={{ marginTop: '0.5rem', color: '#059669', fontWeight: '500' }}>→ M mới (sau chuẩn hóa) = (0.4167, 0.6)</li>
           </ul>
 
-          <p style={{ marginTop: '1.5rem' }}><strong>2. Bảng chuẩn hóa dữ liệu & Tính toán khoảng cách (Euclidean)</strong></p>
-          <p style={{ paddingLeft: '1rem', fontStyle: 'italic', marginBottom: '0.5rem' }}>Công thức khoảng cách: <span style={codeStyle}>d = √((x1 - x2)² + (y1 - y2)²)</span></p>
-          <table style={{ width: '100%', marginBottom: '1rem', borderCollapse: 'collapse', textAlign: 'left', border: '1px solid #e2e8f0' }}>
-            <thead>
-              <tr style={{ borderBottom: '2px solid #cbd5e1', backgroundColor: '#f1f5f9' }}>
-                <th style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>Khách hàng</th>
-                <th style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>Months (Min-Max)</th>
-                <th style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>Weekly (Min-Max)</th>
-                <th style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>Khoảng cách d (so với M)</th>
-                <th style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>Hạng</th>
-                <th style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>VIP_Renewal</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>KH1</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.0833</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.6</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.3334</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>2</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>No</td></tr>
-              <tr><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>KH2</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.8333</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>1.0</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.5775</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>3</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>Yes</td></tr>
-              <tr><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>KH3</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.2500</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.0</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.6227</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>5</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>No</td></tr>
-              <tr style={{ backgroundColor: '#f0fdf4' }}><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0', fontWeight: 'bold' }}>KH4</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.5833</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.8</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0', fontWeight: 'bold', color: '#16a34a' }}>0.2603</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0', fontWeight: 'bold' }}>1</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>Yes</td></tr>
-              <tr><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>KH5</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.0000</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>1.0</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.5776</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>4</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>No</td></tr>
-              <tr><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>KH6</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>1.0000</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.2</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.7072</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>6</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>Yes</td></tr>
-            </tbody>
-          </table>
+          <p style={{ marginTop: '1.5rem' }}><strong>2. Tính toán khoảng cách (Euclidean)</strong></p>
+          <p style={{ paddingLeft: '1rem', fontStyle: 'italic', marginBottom: '0.5rem' }}>Công thức khoảng cách: <span style={codeStyle}>d = <span style={{ whiteSpace: 'nowrap' }}>&radic;<span style={{ borderTop: '1px solid #0f172a', paddingTop: '1px' }}>((x1 - x2)&sup2; + (y1 - y2)&sup2;)</span></span></span></p>
+          <ul style={{ listStyleType: 'none', paddingLeft: '1rem', lineHeight: '2' }}>
+            <li>• <strong>KH1 (0.0833, 0.6):</strong> d = <span style={{ whiteSpace: 'nowrap' }}>&radic;<span style={{ borderTop: '1px solid #334155', paddingTop: '1px' }}>((0.4167 - 0.0833)&sup2; + (0.6 - 0.6)&sup2;)</span></span> &approx; 0.3334 &rarr; <strong>Hạng 2</strong> (No)</li>
+            <li>• <strong>KH2 (0.8333, 1.0):</strong> d = <span style={{ whiteSpace: 'nowrap' }}>&radic;<span style={{ borderTop: '1px solid #334155', paddingTop: '1px' }}>((0.4167 - 0.8333)&sup2; + (0.6 - 1.0)&sup2;)</span></span> &approx; 0.5775 &rarr; <strong>Hạng 3</strong> (Yes)</li>
+            <li>• <strong>KH3 (0.2500, 0.0):</strong> d = <span style={{ whiteSpace: 'nowrap' }}>&radic;<span style={{ borderTop: '1px solid #334155', paddingTop: '1px' }}>((0.4167 - 0.2500)&sup2; + (0.6 - 0.0)&sup2;)</span></span> &approx; 0.6227 &rarr; <strong>Hạng 5</strong> (No)</li>
+            <li style={{ color: '#16a34a', fontWeight: '500', backgroundColor: '#f0fdf4', padding: '0.2rem 0.5rem', borderRadius: '4px' }}>• <strong>KH4 (0.5833, 0.8):</strong> d = <span style={{ whiteSpace: 'nowrap' }}>&radic;<span style={{ borderTop: '1px solid #16a34a', paddingTop: '1px' }}>((0.4167 - 0.5833)&sup2; + (0.6 - 0.8)&sup2;)</span></span> &approx; 0.2603 &rarr; <strong>Hạng 1</strong> (Yes)</li>
+            <li>• <strong>KH5 (0.0000, 1.0):</strong> d = <span style={{ whiteSpace: 'nowrap' }}>&radic;<span style={{ borderTop: '1px solid #334155', paddingTop: '1px' }}>((0.4167 - 0.0000)&sup2; + (0.6 - 1.0)&sup2;)</span></span> &approx; 0.5776 &rarr; <strong>Hạng 4</strong> (No)</li>
+            <li>• <strong>KH6 (1.0000, 0.2):</strong> d = <span style={{ whiteSpace: 'nowrap' }}>&radic;<span style={{ borderTop: '1px solid #334155', paddingTop: '1px' }}>((0.4167 - 1.0000)&sup2; + (0.6 - 0.2)&sup2;)</span></span> &approx; 0.7072 &rarr; <strong>Hạng 6</strong> (Yes)</li>
+          </ul>
 
           <p style={{ marginTop: '1.5rem' }}><strong>3. Phân lớp</strong></p>
           <ul style={{ listStyleType: 'none', paddingLeft: '1rem' }}>
