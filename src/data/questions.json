@@ -1,0 +1,2402 @@
+[
+  {
+    "id": 69,
+    "question": "Việc chọn k = 1 trong thuật toán kNN có thể dẫn đến hiện tượng gì?",
+    "options": [
+      "Overfitting (Quá khớp)",
+      "High Bias",
+      "Thuật toán chạy chậm nhất",
+      "Underfitting (Chưa khớp)"
+    ],
+    "answer": 0,
+    "explanation": "Khi k=1, mô hình trở nên quá nhạy cảm với nhiễu (noise) của từng điểm dữ liệu học, dẫn đến hiện tượng Overfitting."
+  },
+  {
+    "id": 8,
+    "question": "Cho một tập dữ liệu có giá trị nhỏ nhất của thuộc tính A là 2 và lớn nhất là 28. Nếu sử dụng Min-Max Scaling để đưa về đoạn [0, 1], giá trị 19 sẽ được chuẩn hóa thành bao nhiêu?",
+    "options": [
+      "0.65",
+      "0.55",
+      "0.75",
+      "0.68"
+    ],
+    "answer": 0,
+    "explanation": "Công thức Min-Max Scaling: x' = (x - min) / (max - min) = (19 - 2) / (28 - 2) = 0.65."
+  },
+  {
+    "id": 26,
+    "question": "Mục đích chính của Min-Max Scaling là gì?",
+    "options": [
+      "Biến đổi phân phối dữ liệu thành phân phối chuẩn",
+      "Loại bỏ các giá trị ngoại lai (outliers)",
+      "Chuyển kiểu dữ liệu chữ thành số",
+      "Đưa dữ liệu về cùng một thang đo [0, 1] hoặc [-1, 1]"
+    ],
+    "answer": 3,
+    "explanation": "Min-Max Scaling giúp đưa các thuộc tính có thang đo khác nhau về cùng một miền giá trị cố định, thường là [0, 1]."
+  },
+  {
+    "id": 24,
+    "question": "Z-score Standardization (Chuẩn hóa Z-score) đưa dữ liệu về đặc điểm nào?",
+    "options": [
+      "Kỳ vọng (Mean) = 0 và Độ lệch chuẩn (Std Dev) = 1",
+      "Trung vị (Median) = 0",
+      "Giá trị nằm trong đoạn [0, 1]",
+      "Giá trị nằm trong đoạn [-1, 1]"
+    ],
+    "answer": 0,
+    "explanation": "Chuẩn hóa Z-score (hay Standard Scaler) tính theo công thức z = (x - mean) / std, giúp phân phối dữ liệu có kỳ vọng bằng 0 và độ lệch chuẩn bằng 1."
+  },
+  {
+    "id": 31,
+    "question": "Mục đích chính của Min-Max Scaling là gì?",
+    "options": [
+      "Đưa dữ liệu về cùng một thang đo [0, 1] hoặc [-1, 1]",
+      "Biến đổi phân phối dữ liệu thành phân phối chuẩn",
+      "Chuyển kiểu dữ liệu chữ thành số",
+      "Loại bỏ các giá trị ngoại lai (outliers)"
+    ],
+    "answer": 0,
+    "explanation": "Min-Max Scaling giúp đưa các thuộc tính có thang đo khác nhau về cùng một miền giá trị cố định, thường là [0, 1]."
+  },
+  {
+    "id": 16,
+    "question": "Mục đích chính của Min-Max Scaling là gì?",
+    "options": [
+      "Biến đổi phân phối dữ liệu thành phân phối chuẩn",
+      "Loại bỏ các giá trị ngoại lai (outliers)",
+      "Đưa dữ liệu về cùng một thang đo [0, 1] hoặc [-1, 1]",
+      "Chuyển kiểu dữ liệu chữ thành số"
+    ],
+    "answer": 2,
+    "explanation": "Min-Max Scaling giúp đưa các thuộc tính có thang đo khác nhau về cùng một miền giá trị cố định, thường là [0, 1]."
+  },
+  {
+    "id": 181,
+    "question": "Bài toán dự đoán email là Spam hay Non-Spam thuộc nhóm bài toán nào?",
+    "options": [
+      "Học không giám sát",
+      "Phân lớp (Classification)",
+      "Hồi quy (Regression)",
+      "Gom cụm (Clustering)"
+    ],
+    "answer": 1,
+    "explanation": "Phân loại vào các nhãn rời rạc (Spam/Non-Spam) là bài toán Phân lớp."
+  },
+  {
+    "id": 29,
+    "question": "Z-score Standardization (Chuẩn hóa Z-score) đưa dữ liệu về đặc điểm nào?",
+    "options": [
+      "Trung vị (Median) = 0",
+      "Giá trị nằm trong đoạn [-1, 1]",
+      "Giá trị nằm trong đoạn [0, 1]",
+      "Kỳ vọng (Mean) = 0 và Độ lệch chuẩn (Std Dev) = 1"
+    ],
+    "answer": 3,
+    "explanation": "Chuẩn hóa Z-score (hay Standard Scaler) tính theo công thức z = (x - mean) / std, giúp phân phối dữ liệu có kỳ vọng bằng 0 và độ lệch chuẩn bằng 1."
+  },
+  {
+    "id": 32,
+    "question": "Thuật toán nào sau đây nhạy cảm nhất với việc không chuẩn hóa dữ liệu?",
+    "options": [
+      "k-Nearest Neighbors (kNN)",
+      "Naive Bayes",
+      "Decision Tree (Cây quyết định)",
+      "Random Forest"
+    ],
+    "answer": 0,
+    "explanation": "kNN tính toán dựa trên khoảng cách (Euclidean/Manhattan) giữa các điểm, do đó nếu không chuẩn hóa, các thuộc tính có miền giá trị lớn sẽ áp đảo kết quả."
+  },
+  {
+    "id": 30,
+    "question": "Làm thế nào để xử lý dữ liệu bị thiếu (Missing Values) cho thuộc tính dạng số?",
+    "options": [
+      "Biến đổi thành 0 và 1",
+      "Điền bằng giá trị trung bình (Mean) hoặc trung vị (Median)",
+      "Thay bằng giá trị ngẫu nhiên",
+      "Luôn xóa bỏ các dòng có dữ liệu thiếu"
+    ],
+    "answer": 1,
+    "explanation": "Phương pháp phổ biến nhất để xử lý dữ liệu thiếu cho thuộc tính số học là điền giá trị Mean hoặc Median."
+  },
+  {
+    "id": 38,
+    "question": "Thuật toán Cây quyết định (Decision Tree) có cần chuẩn hóa dữ liệu đầu vào (ví dụ Min-Max Scaling) không?",
+    "options": [
+      "Không cần thiết",
+      "Bắt buộc phải có",
+      "Chỉ cần khi dữ liệu có số âm",
+      "Chỉ cần khi phân loại văn bản"
+    ],
+    "answer": 0,
+    "explanation": "Cây quyết định hoạt động dựa trên việc chia rẽ nhánh bằng cách so sánh giá trị (>, <) nên không bị ảnh hưởng bởi thang đo, do đó không cần chuẩn hóa dữ liệu."
+  },
+  {
+    "id": 123,
+    "question": "Một tập dữ liệu D có 8 mẫu, trong đó 4 mẫu thuộc lớp YES và 4 mẫu thuộc lớp NO. Giá trị Entropy(D) là bao nhiêu?",
+    "options": [
+      "0.0",
+      "1.0",
+      "0.5",
+      "-1.0"
+    ],
+    "answer": 1,
+    "explanation": "Tỷ lệ là 4/8 (50%) cho mỗi lớp. Khi xác suất bằng nhau, độ hỗn loạn đạt tối đa nên Entropy = 1."
+  },
+  {
+    "id": 37,
+    "question": "Thuật toán nào sau đây nhạy cảm nhất với việc không chuẩn hóa dữ liệu?",
+    "options": [
+      "k-Nearest Neighbors (kNN)",
+      "Decision Tree (Cây quyết định)",
+      "Naive Bayes",
+      "Random Forest"
+    ],
+    "answer": 0,
+    "explanation": "kNN tính toán dựa trên khoảng cách (Euclidean/Manhattan) giữa các điểm, do đó nếu không chuẩn hóa, các thuộc tính có miền giá trị lớn sẽ áp đảo kết quả."
+  },
+  {
+    "id": 33,
+    "question": "Thuật toán Cây quyết định (Decision Tree) có cần chuẩn hóa dữ liệu đầu vào (ví dụ Min-Max Scaling) không?",
+    "options": [
+      "Chỉ cần khi dữ liệu có số âm",
+      "Bắt buộc phải có",
+      "Chỉ cần khi phân loại văn bản",
+      "Không cần thiết"
+    ],
+    "answer": 3,
+    "explanation": "Cây quyết định hoạt động dựa trên việc chia rẽ nhánh bằng cách so sánh giá trị (>, <) nên không bị ảnh hưởng bởi thang đo, do đó không cần chuẩn hóa dữ liệu."
+  },
+  {
+    "id": 144,
+    "question": "Gaussian Naive Bayes thường được áp dụng cho loại dữ liệu nào?",
+    "options": [
+      "Dữ liệu phân loại (Categorical)",
+      "Dữ liệu nhị phân (0, 1)",
+      "Dữ liệu dạng văn bản",
+      "Dữ liệu số thực liên tục (phân phối chuẩn)"
+    ],
+    "answer": 3,
+    "explanation": "Gaussian NB sử dụng hàm mật độ xác suất phân phối chuẩn (Gauss) để tính likelihood cho các thuộc tính mang giá trị số liên tục."
+  },
+  {
+    "id": 103,
+    "question": "Hiện tượng Overfitting trong Cây quyết định thường xảy ra do nguyên nhân nào?",
+    "options": [
+      "Sử dụng sai công thức Entropy",
+      "Cây quá nông",
+      "Cây phát triển quá sâu và chi tiết theo tập huấn luyện",
+      "Không chuẩn hóa dữ liệu"
+    ],
+    "answer": 2,
+    "explanation": "Nếu cây không bị cắt tỉa (pruning) và phát triển tối đa đến khi mọi nút lá đều tinh khiết, nó sẽ học luôn cả nhiễu của dữ liệu, gây ra Overfitting."
+  },
+  {
+    "id": 21,
+    "question": "Mục đích chính của Min-Max Scaling là gì?",
+    "options": [
+      "Đưa dữ liệu về cùng một thang đo [0, 1] hoặc [-1, 1]",
+      "Chuyển kiểu dữ liệu chữ thành số",
+      "Loại bỏ các giá trị ngoại lai (outliers)",
+      "Biến đổi phân phối dữ liệu thành phân phối chuẩn"
+    ],
+    "answer": 0,
+    "explanation": "Min-Max Scaling giúp đưa các thuộc tính có thang đo khác nhau về cùng một miền giá trị cố định, thường là [0, 1]."
+  },
+  {
+    "id": 76,
+    "question": "Khoảng cách Manhattan giữa điểm P(0, 0) và Q(6, 9) là bao nhiêu?",
+    "options": [
+      "10.82",
+      "9",
+      "54",
+      "15"
+    ],
+    "answer": 3,
+    "explanation": "Khoảng cách Manhattan = |6 - 0| + |9 - 0| = 15."
+  },
+  {
+    "id": 15,
+    "question": "Làm thế nào để xử lý dữ liệu bị thiếu (Missing Values) cho thuộc tính dạng số?",
+    "options": [
+      "Thay bằng giá trị ngẫu nhiên",
+      "Điền bằng giá trị trung bình (Mean) hoặc trung vị (Median)",
+      "Biến đổi thành 0 và 1",
+      "Luôn xóa bỏ các dòng có dữ liệu thiếu"
+    ],
+    "answer": 1,
+    "explanation": "Phương pháp phổ biến nhất để xử lý dữ liệu thiếu cho thuộc tính số học là điền giá trị Mean hoặc Median."
+  },
+  {
+    "id": 160,
+    "question": "Công thức nào sau đây biểu diễn Định lý Bayes?",
+    "options": [
+      "P(C|X) = P(X|C) + P(C)",
+      "P(C|X) = P(C) * P(X)",
+      "P(C|X) = P(X|C) / P(C)",
+      "P(C|X) = ( P(X|C) * P(C) ) / P(X)"
+    ],
+    "answer": 3,
+    "explanation": "Theo định lý Bayes: Xác suất hậu nghiệm = (Likelihood * Xác suất tiên nghiệm) / Evidence."
+  },
+  {
+    "id": 35,
+    "question": "Làm thế nào để xử lý dữ liệu bị thiếu (Missing Values) cho thuộc tính dạng số?",
+    "options": [
+      "Thay bằng giá trị ngẫu nhiên",
+      "Điền bằng giá trị trung bình (Mean) hoặc trung vị (Median)",
+      "Biến đổi thành 0 và 1",
+      "Luôn xóa bỏ các dòng có dữ liệu thiếu"
+    ],
+    "answer": 1,
+    "explanation": "Phương pháp phổ biến nhất để xử lý dữ liệu thiếu cho thuộc tính số học là điền giá trị Mean hoặc Median."
+  },
+  {
+    "id": 57,
+    "question": "Khoảng cách Euclidean giữa hai điểm A(x1, y1) và B(x2, y2) là:",
+    "options": [
+      "((x1 - x2) + (y1 - y2))^2",
+      "|x1 - x2| + |y1 - y2|",
+      "x1*x2 + y1*y2",
+      "Căn bậc hai của ((x1 - x2)^2 + (y1 - y2)^2)"
+    ],
+    "answer": 3,
+    "explanation": "Khoảng cách Euclidean đo độ dài đường thẳng trực tiếp giữa 2 điểm, dùng định lý Pytago."
+  },
+  {
+    "id": 120,
+    "question": "Trong thuật toán ID3 tạo Cây quyết định, thuộc tính nào sẽ được chọn làm Nút Gốc (Root Node)?",
+    "options": [
+      "Thuộc tính có ít giá trị phân biệt nhất",
+      "Thuộc tính có Information Gain LỚN NHẤT",
+      "Thuộc tính có Entropy LỚN NHẤT",
+      "Thuộc tính có Information Gain NHỎ NHẤT"
+    ],
+    "answer": 1,
+    "explanation": "Thuật toán sẽ tham lam chọn thuộc tính mang lại Độ lợi thông tin lớn nhất để chia nhanh nhất các tập thành tinh khiết."
+  },
+  {
+    "id": 86,
+    "question": "Kỹ thuật nào thường được dùng để chống Overfitting cho Cây quyết định?",
+    "options": [
+      "Chuẩn hóa dữ liệu Min-Max",
+      "Sử dụng kNN thay thế",
+      "Cắt tỉa cây (Pruning)",
+      "Thêm các đặc trưng ngẫu nhiên"
+    ],
+    "answer": 2,
+    "explanation": "Pruning (Cắt tỉa) gồm Pre-pruning (Dừng sớm việc xây cây) và Post-pruning (Xây xong rồi tỉa bớt nhánh con) để giảm độ phức tạp của cây."
+  },
+  {
+    "id": 19,
+    "question": "Z-score Standardization (Chuẩn hóa Z-score) đưa dữ liệu về đặc điểm nào?",
+    "options": [
+      "Trung vị (Median) = 0",
+      "Giá trị nằm trong đoạn [-1, 1]",
+      "Giá trị nằm trong đoạn [0, 1]",
+      "Kỳ vọng (Mean) = 0 và Độ lệch chuẩn (Std Dev) = 1"
+    ],
+    "answer": 3,
+    "explanation": "Chuẩn hóa Z-score (hay Standard Scaler) tính theo công thức z = (x - mean) / std, giúp phân phối dữ liệu có kỳ vọng bằng 0 và độ lệch chuẩn bằng 1."
+  },
+  {
+    "id": 121,
+    "question": "Hiện tượng Overfitting trong Cây quyết định thường xảy ra do nguyên nhân nào?",
+    "options": [
+      "Cây phát triển quá sâu và chi tiết theo tập huấn luyện",
+      "Cây quá nông",
+      "Không chuẩn hóa dữ liệu",
+      "Sử dụng sai công thức Entropy"
+    ],
+    "answer": 0,
+    "explanation": "Nếu cây không bị cắt tỉa (pruning) và phát triển tối đa đến khi mọi nút lá đều tinh khiết, nó sẽ học luôn cả nhiễu của dữ liệu, gây ra Overfitting."
+  },
+  {
+    "id": 98,
+    "question": "Kỹ thuật nào thường được dùng để chống Overfitting cho Cây quyết định?",
+    "options": [
+      "Cắt tỉa cây (Pruning)",
+      "Chuẩn hóa dữ liệu Min-Max",
+      "Sử dụng kNN thay thế",
+      "Thêm các đặc trưng ngẫu nhiên"
+    ],
+    "answer": 0,
+    "explanation": "Pruning (Cắt tỉa) gồm Pre-pruning (Dừng sớm việc xây cây) và Post-pruning (Xây xong rồi tỉa bớt nhánh con) để giảm độ phức tạp của cây."
+  },
+  {
+    "id": 5,
+    "question": "Cho một tập dữ liệu có giá trị nhỏ nhất của thuộc tính A là 5 và lớn nhất là 17. Nếu sử dụng Min-Max Scaling để đưa về đoạn [0, 1], giá trị 16 sẽ được chuẩn hóa thành bao nhiêu?",
+    "options": [
+      "0.92",
+      "0.94",
+      "1.02",
+      "0.82"
+    ],
+    "answer": 0,
+    "explanation": "Công thức Min-Max Scaling: x' = (x - min) / (max - min) = (16 - 5) / (17 - 5) = 0.92."
+  },
+  {
+    "id": 40,
+    "question": "Làm thế nào để xử lý dữ liệu bị thiếu (Missing Values) cho thuộc tính dạng số?",
+    "options": [
+      "Biến đổi thành 0 và 1",
+      "Luôn xóa bỏ các dòng có dữ liệu thiếu",
+      "Thay bằng giá trị ngẫu nhiên",
+      "Điền bằng giá trị trung bình (Mean) hoặc trung vị (Median)"
+    ],
+    "answer": 3,
+    "explanation": "Phương pháp phổ biến nhất để xử lý dữ liệu thiếu cho thuộc tính số học là điền giá trị Mean hoặc Median."
+  },
+  {
+    "id": 58,
+    "question": "Trong thuật toán kNN, k đại diện cho điều gì?",
+    "options": [
+      "Số chiều của không gian đặc trưng",
+      "Số lượng láng giềng gần nhất được xét",
+      "Số lần lặp của thuật toán",
+      "Số cụm dữ liệu phân chia"
+    ],
+    "answer": 1,
+    "explanation": "Chữ k trong kNN viết tắt cho k-Nearest Neighbors, tức là xét k hàng xóm gần nhất để bỏ phiếu đưa ra dự đoán."
+  },
+  {
+    "id": 102,
+    "question": "Trong thuật toán ID3 tạo Cây quyết định, thuộc tính nào sẽ được chọn làm Nút Gốc (Root Node)?",
+    "options": [
+      "Thuộc tính có Entropy LỚN NHẤT",
+      "Thuộc tính có ít giá trị phân biệt nhất",
+      "Thuộc tính có Information Gain NHỎ NHẤT",
+      "Thuộc tính có Information Gain LỚN NHẤT"
+    ],
+    "answer": 3,
+    "explanation": "Thuật toán sẽ tham lam chọn thuộc tính mang lại Độ lợi thông tin lớn nhất để chia nhanh nhất các tập thành tinh khiết."
+  },
+  {
+    "id": 195,
+    "question": "Trong bài toán phân loại, Accuracy (Độ chính xác) được tính như thế nào?",
+    "options": [
+      "True Positive / (True Positive + False Negative)",
+      "Số mẫu dự đoán đúng / Tổng số mẫu",
+      "True Positive / (True Positive + False Positive)",
+      "2 * (Precision * Recall) / (Precision + Recall)"
+    ],
+    "answer": 1,
+    "explanation": "Accuracy là tỷ lệ các dự đoán đúng trên toàn bộ tập kiểm thử: (TP + TN) / (TP + TN + FP + FN)."
+  },
+  {
+    "id": 39,
+    "question": "Z-score Standardization (Chuẩn hóa Z-score) đưa dữ liệu về đặc điểm nào?",
+    "options": [
+      "Kỳ vọng (Mean) = 0 và Độ lệch chuẩn (Std Dev) = 1",
+      "Giá trị nằm trong đoạn [0, 1]",
+      "Giá trị nằm trong đoạn [-1, 1]",
+      "Trung vị (Median) = 0"
+    ],
+    "answer": 0,
+    "explanation": "Chuẩn hóa Z-score (hay Standard Scaler) tính theo công thức z = (x - mean) / std, giúp phân phối dữ liệu có kỳ vọng bằng 0 và độ lệch chuẩn bằng 1."
+  },
+  {
+    "id": 17,
+    "question": "Thuật toán nào sau đây nhạy cảm nhất với việc không chuẩn hóa dữ liệu?",
+    "options": [
+      "Random Forest",
+      "Naive Bayes",
+      "Decision Tree (Cây quyết định)",
+      "k-Nearest Neighbors (kNN)"
+    ],
+    "answer": 3,
+    "explanation": "kNN tính toán dựa trên khoảng cách (Euclidean/Manhattan) giữa các điểm, do đó nếu không chuẩn hóa, các thuộc tính có miền giá trị lớn sẽ áp đảo kết quả."
+  },
+  {
+    "id": 65,
+    "question": "kNN thuộc nhóm thuật toán học máy nào?",
+    "options": [
+      "Học có giám sát (Supervised Learning) - Lazy Learning",
+      "Học không giám sát (Unsupervised Learning)",
+      "Học tăng cường (Reinforcement Learning)",
+      "Eager Learning (Học háo hức)"
+    ],
+    "answer": 0,
+    "explanation": "kNN là thuật toán học có giám sát dựa trên khoảng cách. Được gọi là Lazy Learning vì nó không xây dựng một mô hình toán học khái quát mà chỉ lưu trữ lại toàn bộ tập huấn luyện."
+  },
+  {
+    "id": 61,
+    "question": "Khoảng cách Manhattan giữa hai điểm A(x1, y1) và B(x2, y2) được tính bằng công thức nào?",
+    "options": [
+      "sqrt((x1 - x2)^2 + (y1 - y2)^2)",
+      "|x1 - x2| + |y1 - y2|",
+      "max(|x1 - x2|, |y1 - y2|)",
+      "(x1*x2 + y1*y2)"
+    ],
+    "answer": 1,
+    "explanation": "Khoảng cách Manhattan (City Block distance) là tổng giá trị tuyệt đối của hiệu các tọa độ: |x1 - x2| + |y1 - y2|."
+  },
+  {
+    "id": 88,
+    "question": "Entropy của một tập dữ liệu đạt giá trị BẰNG 0 khi nào?",
+    "options": [
+      "Khi không có thuộc tính nào để phân nhánh",
+      "Khi có quá nhiều dữ liệu",
+      "Khi tỷ lệ các lớp bằng nhau",
+      "Khi tập dữ liệu hoàn toàn tinh khiết (chỉ thuộc về 1 lớp)"
+    ],
+    "answer": 3,
+    "explanation": "Khi tất cả các mẫu đều thuộc về duy nhất 1 lớp (tinh khiết), độ hỗn loạn bằng 0, Entropy(D) = 0."
+  },
+  {
+    "id": 99,
+    "question": "Entropy của một tập dữ liệu đạt giá trị LỚN NHẤT khi nào?",
+    "options": [
+      "Khi số lượng mẫu của các lớp bằng nhau hoàn toàn",
+      "Khi cây không thể phân nhánh được nữa",
+      "Khi tập dữ liệu chỉ chứa mẫu của một lớp duy nhất",
+      "Khi số lượng mẫu bằng 0"
+    ],
+    "answer": 0,
+    "explanation": "Entropy đo lường sự hỗn loạn. Hỗn loạn lớn nhất (Entropy tối đa = 1 đối với bài toán nhị phân) khi tỷ lệ các lớp là 50/50."
+  },
+  {
+    "id": 165,
+    "question": "Công thức nào sau đây biểu diễn Định lý Bayes?",
+    "options": [
+      "P(C|X) = P(X|C) + P(C)",
+      "P(C|X) = P(C) * P(X)",
+      "P(C|X) = P(X|C) / P(C)",
+      "P(C|X) = ( P(X|C) * P(C) ) / P(X)"
+    ],
+    "answer": 3,
+    "explanation": "Theo định lý Bayes: Xác suất hậu nghiệm = (Likelihood * Xác suất tiên nghiệm) / Evidence."
+  },
+  {
+    "id": 55,
+    "question": "kNN thuộc nhóm thuật toán học máy nào?",
+    "options": [
+      "Học có giám sát (Supervised Learning) - Lazy Learning",
+      "Eager Learning (Học háo hức)",
+      "Học tăng cường (Reinforcement Learning)",
+      "Học không giám sát (Unsupervised Learning)"
+    ],
+    "answer": 0,
+    "explanation": "kNN là thuật toán học có giám sát dựa trên khoảng cách. Được gọi là Lazy Learning vì nó không xây dựng một mô hình toán học khái quát mà chỉ lưu trữ lại toàn bộ tập huấn luyện."
+  },
+  {
+    "id": 75,
+    "question": "Khoảng cách Manhattan giữa điểm P(0, 0) và Q(5, 9) là bao nhiêu?",
+    "options": [
+      "10.30",
+      "14",
+      "9",
+      "45"
+    ],
+    "answer": 1,
+    "explanation": "Khoảng cách Manhattan = |5 - 0| + |9 - 0| = 14."
+  },
+  {
+    "id": 64,
+    "question": "Việc chọn k = 1 trong thuật toán kNN có thể dẫn đến hiện tượng gì?",
+    "options": [
+      "Thuật toán chạy chậm nhất",
+      "High Bias",
+      "Underfitting (Chưa khớp)",
+      "Overfitting (Quá khớp)"
+    ],
+    "answer": 3,
+    "explanation": "Khi k=1, mô hình trở nên quá nhạy cảm với nhiễu (noise) của từng điểm dữ liệu học, dẫn đến hiện tượng Overfitting."
+  },
+  {
+    "id": 164,
+    "question": "Gaussian Naive Bayes thường được áp dụng cho loại dữ liệu nào?",
+    "options": [
+      "Dữ liệu phân loại (Categorical)",
+      "Dữ liệu nhị phân (0, 1)",
+      "Dữ liệu dạng văn bản",
+      "Dữ liệu số thực liên tục (phân phối chuẩn)"
+    ],
+    "answer": 3,
+    "explanation": "Gaussian NB sử dụng hàm mật độ xác suất phân phối chuẩn (Gauss) để tính likelihood cho các thuộc tính mang giá trị số liên tục."
+  },
+  {
+    "id": 62,
+    "question": "Khoảng cách Euclidean giữa hai điểm A(x1, y1) và B(x2, y2) là:",
+    "options": [
+      "|x1 - x2| + |y1 - y2|",
+      "x1*x2 + y1*y2",
+      "Căn bậc hai của ((x1 - x2)^2 + (y1 - y2)^2)",
+      "((x1 - x2) + (y1 - y2))^2"
+    ],
+    "answer": 2,
+    "explanation": "Khoảng cách Euclidean đo độ dài đường thẳng trực tiếp giữa 2 điểm, dùng định lý Pytago."
+  },
+  {
+    "id": 152,
+    "question": "Chữ 'Naive' (Ngây thơ) trong Naive Bayes ngụ ý điều gì?",
+    "options": [
+      "Thuật toán luôn đưa ra xác suất sai",
+      "Thuật toán này rất đơn giản để lập trình",
+      "Giả định các thuộc tính đầu vào là Độc lập có điều kiện với nhau",
+      "Nó chỉ dùng cho các bài toán dễ"
+    ],
+    "answer": 2,
+    "explanation": "Mô hình này 'ngây thơ' giả định rằng sự xuất hiện của một thuộc tính không ảnh hưởng đến các thuộc tính khác khi đã biết nhãn (Độc lập có điều kiện)."
+  },
+  {
+    "id": 11,
+    "question": "Mục đích chính của Min-Max Scaling là gì?",
+    "options": [
+      "Chuyển kiểu dữ liệu chữ thành số",
+      "Biến đổi phân phối dữ liệu thành phân phối chuẩn",
+      "Loại bỏ các giá trị ngoại lai (outliers)",
+      "Đưa dữ liệu về cùng một thang đo [0, 1] hoặc [-1, 1]"
+    ],
+    "answer": 3,
+    "explanation": "Min-Max Scaling giúp đưa các thuộc tính có thang đo khác nhau về cùng một miền giá trị cố định, thường là [0, 1]."
+  },
+  {
+    "id": 105,
+    "question": "Entropy của một tập dữ liệu đạt giá trị LỚN NHẤT khi nào?",
+    "options": [
+      "Khi số lượng mẫu bằng 0",
+      "Khi tập dữ liệu chỉ chứa mẫu của một lớp duy nhất",
+      "Khi cây không thể phân nhánh được nữa",
+      "Khi số lượng mẫu của các lớp bằng nhau hoàn toàn"
+    ],
+    "answer": 3,
+    "explanation": "Entropy đo lường sự hỗn loạn. Hỗn loạn lớn nhất (Entropy tối đa = 1 đối với bài toán nhị phân) khi tỷ lệ các lớp là 50/50."
+  },
+  {
+    "id": 27,
+    "question": "Thuật toán nào sau đây nhạy cảm nhất với việc không chuẩn hóa dữ liệu?",
+    "options": [
+      "k-Nearest Neighbors (kNN)",
+      "Decision Tree (Cây quyết định)",
+      "Naive Bayes",
+      "Random Forest"
+    ],
+    "answer": 0,
+    "explanation": "kNN tính toán dựa trên khoảng cách (Euclidean/Manhattan) giữa các điểm, do đó nếu không chuẩn hóa, các thuộc tính có miền giá trị lớn sẽ áp đảo kết quả."
+  },
+  {
+    "id": 59,
+    "question": "Việc chọn k = 1 trong thuật toán kNN có thể dẫn đến hiện tượng gì?",
+    "options": [
+      "Overfitting (Quá khớp)",
+      "Underfitting (Chưa khớp)",
+      "High Bias",
+      "Thuật toán chạy chậm nhất"
+    ],
+    "answer": 0,
+    "explanation": "Khi k=1, mô hình trở nên quá nhạy cảm với nhiễu (noise) của từng điểm dữ liệu học, dẫn đến hiện tượng Overfitting."
+  },
+  {
+    "id": 198,
+    "question": "Bài toán dự đoán giá nhà dựa trên diện tích thuộc nhóm bài toán nào?",
+    "options": [
+      "Hồi quy (Regression)",
+      "Khai phá luật kết hợp (Association Rules)",
+      "Phân lớp (Classification)",
+      "Gom cụm (Clustering)"
+    ],
+    "answer": 0,
+    "explanation": "Giá nhà là một biến số thực liên tục, do đó dự đoán giá nhà là bài toán Hồi quy (Regression)."
+  },
+  {
+    "id": 49,
+    "question": "Việc chọn k = 1 trong thuật toán kNN có thể dẫn đến hiện tượng gì?",
+    "options": [
+      "Overfitting (Quá khớp)",
+      "Thuật toán chạy chậm nhất",
+      "Underfitting (Chưa khớp)",
+      "High Bias"
+    ],
+    "answer": 0,
+    "explanation": "Khi k=1, mô hình trở nên quá nhạy cảm với nhiễu (noise) của từng điểm dữ liệu học, dẫn đến hiện tượng Overfitting."
+  },
+  {
+    "id": 51,
+    "question": "Khoảng cách Manhattan giữa hai điểm A(x1, y1) và B(x2, y2) được tính bằng công thức nào?",
+    "options": [
+      "|x1 - x2| + |y1 - y2|",
+      "sqrt((x1 - x2)^2 + (y1 - y2)^2)",
+      "max(|x1 - x2|, |y1 - y2|)",
+      "(x1*x2 + y1*y2)"
+    ],
+    "answer": 0,
+    "explanation": "Khoảng cách Manhattan (City Block distance) là tổng giá trị tuyệt đối của hiệu các tọa độ: |x1 - x2| + |y1 - y2|."
+  },
+  {
+    "id": 74,
+    "question": "Khoảng cách Manhattan giữa điểm P(0, 0) và Q(4, 6) là bao nhiêu?",
+    "options": [
+      "10",
+      "24",
+      "7.21",
+      "6"
+    ],
+    "answer": 0,
+    "explanation": "Khoảng cách Manhattan = |4 - 0| + |6 - 0| = 10."
+  },
+  {
+    "id": 122,
+    "question": "Kỹ thuật nào thường được dùng để chống Overfitting cho Cây quyết định?",
+    "options": [
+      "Thêm các đặc trưng ngẫu nhiên",
+      "Sử dụng kNN thay thế",
+      "Chuẩn hóa dữ liệu Min-Max",
+      "Cắt tỉa cây (Pruning)"
+    ],
+    "answer": 3,
+    "explanation": "Pruning (Cắt tỉa) gồm Pre-pruning (Dừng sớm việc xây cây) và Post-pruning (Xây xong rồi tỉa bớt nhánh con) để giảm độ phức tạp của cây."
+  },
+  {
+    "id": 48,
+    "question": "Trong thuật toán kNN, k đại diện cho điều gì?",
+    "options": [
+      "Số chiều của không gian đặc trưng",
+      "Số cụm dữ liệu phân chia",
+      "Số lần lặp của thuật toán",
+      "Số lượng láng giềng gần nhất được xét"
+    ],
+    "answer": 3,
+    "explanation": "Chữ k trong kNN viết tắt cho k-Nearest Neighbors, tức là xét k hàng xóm gần nhất để bỏ phiếu đưa ra dự đoán."
+  },
+  {
+    "id": 68,
+    "question": "Trong thuật toán kNN, k đại diện cho điều gì?",
+    "options": [
+      "Số chiều của không gian đặc trưng",
+      "Số lần lặp của thuật toán",
+      "Số lượng láng giềng gần nhất được xét",
+      "Số cụm dữ liệu phân chia"
+    ],
+    "answer": 2,
+    "explanation": "Chữ k trong kNN viết tắt cho k-Nearest Neighbors, tức là xét k hàng xóm gần nhất để bỏ phiếu đưa ra dự đoán."
+  },
+  {
+    "id": 12,
+    "question": "Thuật toán nào sau đây nhạy cảm nhất với việc không chuẩn hóa dữ liệu?",
+    "options": [
+      "k-Nearest Neighbors (kNN)",
+      "Decision Tree (Cây quyết định)",
+      "Naive Bayes",
+      "Random Forest"
+    ],
+    "answer": 0,
+    "explanation": "kNN tính toán dựa trên khoảng cách (Euclidean/Manhattan) giữa các điểm, do đó nếu không chuẩn hóa, các thuộc tính có miền giá trị lớn sẽ áp đảo kết quả."
+  },
+  {
+    "id": 1,
+    "question": "Cho một tập dữ liệu có giá trị nhỏ nhất của thuộc tính A là 7 và lớn nhất là 33. Nếu sử dụng Min-Max Scaling để đưa về đoạn [0, 1], giá trị 24 sẽ được chuẩn hóa thành bao nhiêu?",
+    "options": [
+      "0.65",
+      "0.55",
+      "0.75",
+      "0.73"
+    ],
+    "answer": 0,
+    "explanation": "Công thức Min-Max Scaling: x' = (x - min) / (max - min) = (24 - 7) / (33 - 7) = 0.65."
+  },
+  {
+    "id": 179,
+    "question": "Kỹ thuật K-Fold Cross-Validation dùng để làm gì?",
+    "options": [
+      "Tăng tốc độ huấn luyện mô hình",
+      "Đánh giá độ ổn định và giảm sai lệch khi chia tập train/test",
+      "Giảm chiều dữ liệu",
+      "Chuẩn hóa dữ liệu về [0, 1]"
+    ],
+    "answer": 1,
+    "explanation": "Cross-validation chia dữ liệu thành K phần, huấn luyện K lần luân phiên để đánh giá khả năng tổng quát hóa của mô hình tốt hơn."
+  },
+  {
+    "id": 83,
+    "question": "Information Gain (Độ lợi thông tin) được tính như thế nào?",
+    "options": [
+      "Gini(Cha) - Gini(Con)",
+      "Entropy(Cha) - Tổng Entropy(Con) có trọng số",
+      "Tổng Entropy(Con) - Entropy(Cha)",
+      "Entropy(Cha) * Entropy(Con)"
+    ],
+    "answer": 1,
+    "explanation": "Độ lợi thông tin (IG) đánh giá mức độ giảm độ hỗn loạn: IG = Entropy của tập D ban đầu trừ đi phần kỳ vọng Entropy sau khi chia nhánh."
+  },
+  {
+    "id": 200,
+    "question": "Một Confusion Matrix (Ma trận nhầm lẫn) của bài toán phân loại nhị phân có kích thước là bao nhiêu?",
+    "options": [
+      "2x2",
+      "3x3",
+      "Nhiều chiều tùy dữ liệu",
+      "1x2"
+    ],
+    "answer": 0,
+    "explanation": "Bài toán nhị phân có 2 lớp (Positive, Negative) nên ma trận có kích thước 2x2 chứa TP, TN, FP, FN."
+  },
+  {
+    "id": 95,
+    "question": "Information Gain (Độ lợi thông tin) được tính như thế nào?",
+    "options": [
+      "Entropy(Cha) * Entropy(Con)",
+      "Entropy(Cha) - Tổng Entropy(Con) có trọng số",
+      "Gini(Cha) - Gini(Con)",
+      "Tổng Entropy(Con) - Entropy(Cha)"
+    ],
+    "answer": 1,
+    "explanation": "Độ lợi thông tin (IG) đánh giá mức độ giảm độ hỗn loạn: IG = Entropy của tập D ban đầu trừ đi phần kỳ vọng Entropy sau khi chia nhánh."
+  },
+  {
+    "id": 43,
+    "question": "Trong thuật toán kNN, k đại diện cho điều gì?",
+    "options": [
+      "Số lượng láng giềng gần nhất được xét",
+      "Số chiều của không gian đặc trưng",
+      "Số lần lặp của thuật toán",
+      "Số cụm dữ liệu phân chia"
+    ],
+    "answer": 0,
+    "explanation": "Chữ k trong kNN viết tắt cho k-Nearest Neighbors, tức là xét k hàng xóm gần nhất để bỏ phiếu đưa ra dự đoán."
+  },
+  {
+    "id": 36,
+    "question": "Mục đích chính của Min-Max Scaling là gì?",
+    "options": [
+      "Đưa dữ liệu về cùng một thang đo [0, 1] hoặc [-1, 1]",
+      "Loại bỏ các giá trị ngoại lai (outliers)",
+      "Biến đổi phân phối dữ liệu thành phân phối chuẩn",
+      "Chuyển kiểu dữ liệu chữ thành số"
+    ],
+    "answer": 0,
+    "explanation": "Min-Max Scaling giúp đưa các thuộc tính có thang đo khác nhau về cùng một miền giá trị cố định, thường là [0, 1]."
+  },
+  {
+    "id": 9,
+    "question": "Cho một tập dữ liệu có giá trị nhỏ nhất của thuộc tính A là 1 và lớn nhất là 29. Nếu sử dụng Min-Max Scaling để đưa về đoạn [0, 1], giá trị 7 sẽ được chuẩn hóa thành bao nhiêu?",
+    "options": [
+      "0.21",
+      "0.11",
+      "0.24",
+      "0.31"
+    ],
+    "answer": 0,
+    "explanation": "Công thức Min-Max Scaling: x' = (x - min) / (max - min) = (7 - 1) / (29 - 1) = 0.21."
+  },
+  {
+    "id": 50,
+    "question": "kNN thuộc nhóm thuật toán học máy nào?",
+    "options": [
+      "Eager Learning (Học háo hức)",
+      "Học không giám sát (Unsupervised Learning)",
+      "Học có giám sát (Supervised Learning) - Lazy Learning",
+      "Học tăng cường (Reinforcement Learning)"
+    ],
+    "answer": 2,
+    "explanation": "kNN là thuật toán học có giám sát dựa trên khoảng cách. Được gọi là Lazy Learning vì nó không xây dựng một mô hình toán học khái quát mà chỉ lưu trữ lại toàn bộ tập huấn luyện."
+  },
+  {
+    "id": 162,
+    "question": "Chữ 'Naive' (Ngây thơ) trong Naive Bayes ngụ ý điều gì?",
+    "options": [
+      "Giả định các thuộc tính đầu vào là Độc lập có điều kiện với nhau",
+      "Thuật toán này rất đơn giản để lập trình",
+      "Thuật toán luôn đưa ra xác suất sai",
+      "Nó chỉ dùng cho các bài toán dễ"
+    ],
+    "answer": 0,
+    "explanation": "Mô hình này 'ngây thơ' giả định rằng sự xuất hiện của một thuộc tính không ảnh hưởng đến các thuộc tính khác khi đã biết nhãn (Độc lập có điều kiện)."
+  },
+  {
+    "id": 171,
+    "question": "Trong bài toán phân loại, Accuracy (Độ chính xác) được tính như thế nào?",
+    "options": [
+      "2 * (Precision * Recall) / (Precision + Recall)",
+      "True Positive / (True Positive + False Negative)",
+      "True Positive / (True Positive + False Positive)",
+      "Số mẫu dự đoán đúng / Tổng số mẫu"
+    ],
+    "answer": 3,
+    "explanation": "Accuracy là tỷ lệ các dự đoán đúng trên toàn bộ tập kiểm thử: (TP + TN) / (TP + TN + FP + FN)."
+  },
+  {
+    "id": 146,
+    "question": "Thuật toán Naive Bayes dựa trên định lý toán học nào?",
+    "options": [
+      "Định lý Bayes",
+      "Bất đẳng thức Markov",
+      "Định luật Số lớn",
+      "Định lý Pytago"
+    ],
+    "answer": 0,
+    "explanation": "Thuật toán Naive Bayes ứng dụng Định lý Bayes về xác suất có điều kiện P(A|B) = [P(B|A) * P(A)] / P(B)."
+  },
+  {
+    "id": 47,
+    "question": "Khoảng cách Euclidean giữa hai điểm A(x1, y1) và B(x2, y2) là:",
+    "options": [
+      "x1*x2 + y1*y2",
+      "((x1 - x2) + (y1 - y2))^2",
+      "|x1 - x2| + |y1 - y2|",
+      "Căn bậc hai của ((x1 - x2)^2 + (y1 - y2)^2)"
+    ],
+    "answer": 3,
+    "explanation": "Khoảng cách Euclidean đo độ dài đường thẳng trực tiếp giữa 2 điểm, dùng định lý Pytago."
+  },
+  {
+    "id": 147,
+    "question": "Chữ 'Naive' (Ngây thơ) trong Naive Bayes ngụ ý điều gì?",
+    "options": [
+      "Thuật toán luôn đưa ra xác suất sai",
+      "Thuật toán này rất đơn giản để lập trình",
+      "Nó chỉ dùng cho các bài toán dễ",
+      "Giả định các thuộc tính đầu vào là Độc lập có điều kiện với nhau"
+    ],
+    "answer": 3,
+    "explanation": "Mô hình này 'ngây thơ' giả định rằng sự xuất hiện của một thuộc tính không ảnh hưởng đến các thuộc tính khác khi đã biết nhãn (Độc lập có điều kiện)."
+  },
+  {
+    "id": 108,
+    "question": "Trong thuật toán ID3 tạo Cây quyết định, thuộc tính nào sẽ được chọn làm Nút Gốc (Root Node)?",
+    "options": [
+      "Thuộc tính có ít giá trị phân biệt nhất",
+      "Thuộc tính có Entropy LỚN NHẤT",
+      "Thuộc tính có Information Gain NHỎ NHẤT",
+      "Thuộc tính có Information Gain LỚN NHẤT"
+    ],
+    "answer": 3,
+    "explanation": "Thuật toán sẽ tham lam chọn thuộc tính mang lại Độ lợi thông tin lớn nhất để chia nhanh nhất các tập thành tinh khiết."
+  },
+  {
+    "id": 45,
+    "question": "kNN thuộc nhóm thuật toán học máy nào?",
+    "options": [
+      "Eager Learning (Học háo hức)",
+      "Học có giám sát (Supervised Learning) - Lazy Learning",
+      "Học tăng cường (Reinforcement Learning)",
+      "Học không giám sát (Unsupervised Learning)"
+    ],
+    "answer": 1,
+    "explanation": "kNN là thuật toán học có giám sát dựa trên khoảng cách. Được gọi là Lazy Learning vì nó không xây dựng một mô hình toán học khái quát mà chỉ lưu trữ lại toàn bộ tập huấn luyện."
+  },
+  {
+    "id": 90,
+    "question": "Trong thuật toán ID3 tạo Cây quyết định, thuộc tính nào sẽ được chọn làm Nút Gốc (Root Node)?",
+    "options": [
+      "Thuộc tính có Entropy LỚN NHẤT",
+      "Thuộc tính có Information Gain LỚN NHẤT",
+      "Thuộc tính có Information Gain NHỎ NHẤT",
+      "Thuộc tính có ít giá trị phân biệt nhất"
+    ],
+    "answer": 1,
+    "explanation": "Thuật toán sẽ tham lam chọn thuộc tính mang lại Độ lợi thông tin lớn nhất để chia nhanh nhất các tập thành tinh khiết."
+  },
+  {
+    "id": 85,
+    "question": "Hiện tượng Overfitting trong Cây quyết định thường xảy ra do nguyên nhân nào?",
+    "options": [
+      "Không chuẩn hóa dữ liệu",
+      "Cây phát triển quá sâu và chi tiết theo tập huấn luyện",
+      "Sử dụng sai công thức Entropy",
+      "Cây quá nông"
+    ],
+    "answer": 1,
+    "explanation": "Nếu cây không bị cắt tỉa (pruning) và phát triển tối đa đến khi mọi nút lá đều tinh khiết, nó sẽ học luôn cả nhiễu của dữ liệu, gây ra Overfitting."
+  },
+  {
+    "id": 190,
+    "question": "Chỉ số Recall (Độ phủ) mang ý nghĩa gì?",
+    "options": [
+      "Trong số những mẫu thực tế là Positive, mô hình dự đoán đúng bao nhiêu %",
+      "Trong số những mẫu mô hình dự đoán là Positive, thực tế đúng bao nhiêu %",
+      "Độ chính xác tổng thể",
+      "Phần trăm dự đoán sai"
+    ],
+    "answer": 0,
+    "explanation": "Recall (hay Sensitivity) = TP / (TP + FN). Đo lường khả năng tìm ra tất cả các mẫu dương tính thực tế."
+  },
+  {
+    "id": 92,
+    "question": "Kỹ thuật nào thường được dùng để chống Overfitting cho Cây quyết định?",
+    "options": [
+      "Chuẩn hóa dữ liệu Min-Max",
+      "Cắt tỉa cây (Pruning)",
+      "Sử dụng kNN thay thế",
+      "Thêm các đặc trưng ngẫu nhiên"
+    ],
+    "answer": 1,
+    "explanation": "Pruning (Cắt tỉa) gồm Pre-pruning (Dừng sớm việc xây cây) và Post-pruning (Xây xong rồi tỉa bớt nhánh con) để giảm độ phức tạp của cây."
+  },
+  {
+    "id": 94,
+    "question": "Entropy của một tập dữ liệu đạt giá trị BẰNG 0 khi nào?",
+    "options": [
+      "Khi có quá nhiều dữ liệu",
+      "Khi tỷ lệ các lớp bằng nhau",
+      "Khi tập dữ liệu hoàn toàn tinh khiết (chỉ thuộc về 1 lớp)",
+      "Khi không có thuộc tính nào để phân nhánh"
+    ],
+    "answer": 2,
+    "explanation": "Khi tất cả các mẫu đều thuộc về duy nhất 1 lớp (tinh khiết), độ hỗn loạn bằng 0, Entropy(D) = 0."
+  },
+  {
+    "id": 119,
+    "question": "Information Gain (Độ lợi thông tin) được tính như thế nào?",
+    "options": [
+      "Entropy(Cha) - Tổng Entropy(Con) có trọng số",
+      "Tổng Entropy(Con) - Entropy(Cha)",
+      "Gini(Cha) - Gini(Con)",
+      "Entropy(Cha) * Entropy(Con)"
+    ],
+    "answer": 0,
+    "explanation": "Độ lợi thông tin (IG) đánh giá mức độ giảm độ hỗn loạn: IG = Entropy của tập D ban đầu trừ đi phần kỳ vọng Entropy sau khi chia nhánh."
+  },
+  {
+    "id": 163,
+    "question": "Khi gặp một giá trị thuộc tính chưa từng xuất hiện trong tập huấn luyện (Xác suất bằng 0), Naive Bayes sẽ gặp lỗi gì và cách khắc phục?",
+    "options": [
+      "Missing Value / Khắc phục bằng Mean",
+      "Underfitting / Khắc phục bằng K-Fold",
+      "Overfitting / Khắc phục bằng Pruning",
+      "Zero Probability / Khắc phục bằng Laplace Smoothing"
+    ],
+    "answer": 3,
+    "explanation": "Khi một xác suất bằng 0, do phép nhân nên toàn bộ likelihood bằng 0. Laplace Smoothing (+1 vào tử số) được dùng để giải quyết."
+  },
+  {
+    "id": 149,
+    "question": "Gaussian Naive Bayes thường được áp dụng cho loại dữ liệu nào?",
+    "options": [
+      "Dữ liệu nhị phân (0, 1)",
+      "Dữ liệu dạng văn bản",
+      "Dữ liệu số thực liên tục (phân phối chuẩn)",
+      "Dữ liệu phân loại (Categorical)"
+    ],
+    "answer": 2,
+    "explanation": "Gaussian NB sử dụng hàm mật độ xác suất phân phối chuẩn (Gauss) để tính likelihood cho các thuộc tính mang giá trị số liên tục."
+  },
+  {
+    "id": 96,
+    "question": "Trong thuật toán ID3 tạo Cây quyết định, thuộc tính nào sẽ được chọn làm Nút Gốc (Root Node)?",
+    "options": [
+      "Thuộc tính có Information Gain NHỎ NHẤT",
+      "Thuộc tính có Entropy LỚN NHẤT",
+      "Thuộc tính có Information Gain LỚN NHẤT",
+      "Thuộc tính có ít giá trị phân biệt nhất"
+    ],
+    "answer": 2,
+    "explanation": "Thuật toán sẽ tham lam chọn thuộc tính mang lại Độ lợi thông tin lớn nhất để chia nhanh nhất các tập thành tinh khiết."
+  },
+  {
+    "id": 139,
+    "question": "Gaussian Naive Bayes thường được áp dụng cho loại dữ liệu nào?",
+    "options": [
+      "Dữ liệu phân loại (Categorical)",
+      "Dữ liệu số thực liên tục (phân phối chuẩn)",
+      "Dữ liệu dạng văn bản",
+      "Dữ liệu nhị phân (0, 1)"
+    ],
+    "answer": 1,
+    "explanation": "Gaussian NB sử dụng hàm mật độ xác suất phân phối chuẩn (Gauss) để tính likelihood cho các thuộc tính mang giá trị số liên tục."
+  },
+  {
+    "id": 97,
+    "question": "Hiện tượng Overfitting trong Cây quyết định thường xảy ra do nguyên nhân nào?",
+    "options": [
+      "Sử dụng sai công thức Entropy",
+      "Không chuẩn hóa dữ liệu",
+      "Cây quá nông",
+      "Cây phát triển quá sâu và chi tiết theo tập huấn luyện"
+    ],
+    "answer": 3,
+    "explanation": "Nếu cây không bị cắt tỉa (pruning) và phát triển tối đa đến khi mọi nút lá đều tinh khiết, nó sẽ học luôn cả nhiễu của dữ liệu, gây ra Overfitting."
+  },
+  {
+    "id": 41,
+    "question": "Khoảng cách Manhattan giữa hai điểm A(x1, y1) và B(x2, y2) được tính bằng công thức nào?",
+    "options": [
+      "|x1 - x2| + |y1 - y2|",
+      "sqrt((x1 - x2)^2 + (y1 - y2)^2)",
+      "max(|x1 - x2|, |y1 - y2|)",
+      "(x1*x2 + y1*y2)"
+    ],
+    "answer": 0,
+    "explanation": "Khoảng cách Manhattan (City Block distance) là tổng giá trị tuyệt đối của hiệu các tọa độ: |x1 - x2| + |y1 - y2|."
+  },
+  {
+    "id": 46,
+    "question": "Khoảng cách Manhattan giữa hai điểm A(x1, y1) và B(x2, y2) được tính bằng công thức nào?",
+    "options": [
+      "max(|x1 - x2|, |y1 - y2|)",
+      "|x1 - x2| + |y1 - y2|",
+      "sqrt((x1 - x2)^2 + (y1 - y2)^2)",
+      "(x1*x2 + y1*y2)"
+    ],
+    "answer": 1,
+    "explanation": "Khoảng cách Manhattan (City Block distance) là tổng giá trị tuyệt đối của hiệu các tọa độ: |x1 - x2| + |y1 - y2|."
+  },
+  {
+    "id": 148,
+    "question": "Khi gặp một giá trị thuộc tính chưa từng xuất hiện trong tập huấn luyện (Xác suất bằng 0), Naive Bayes sẽ gặp lỗi gì và cách khắc phục?",
+    "options": [
+      "Zero Probability / Khắc phục bằng Laplace Smoothing",
+      "Overfitting / Khắc phục bằng Pruning",
+      "Underfitting / Khắc phục bằng K-Fold",
+      "Missing Value / Khắc phục bằng Mean"
+    ],
+    "answer": 0,
+    "explanation": "Khi một xác suất bằng 0, do phép nhân nên toàn bộ likelihood bằng 0. Laplace Smoothing (+1 vào tử số) được dùng để giải quyết."
+  },
+  {
+    "id": 13,
+    "question": "Thuật toán Cây quyết định (Decision Tree) có cần chuẩn hóa dữ liệu đầu vào (ví dụ Min-Max Scaling) không?",
+    "options": [
+      "Bắt buộc phải có",
+      "Không cần thiết",
+      "Chỉ cần khi phân loại văn bản",
+      "Chỉ cần khi dữ liệu có số âm"
+    ],
+    "answer": 1,
+    "explanation": "Cây quyết định hoạt động dựa trên việc chia rẽ nhánh bằng cách so sánh giá trị (>, <) nên không bị ảnh hưởng bởi thang đo, do đó không cần chuẩn hóa dữ liệu."
+  },
+  {
+    "id": 10,
+    "question": "Cho một tập dữ liệu có giá trị nhỏ nhất của thuộc tính A là 1 và lớn nhất là 28. Nếu sử dụng Min-Max Scaling để đưa về đoạn [0, 1], giá trị 2 sẽ được chuẩn hóa thành bao nhiêu?",
+    "options": [
+      "0.07",
+      "0.14",
+      "-0.06",
+      "0.04"
+    ],
+    "answer": 3,
+    "explanation": "Công thức Min-Max Scaling: x' = (x - min) / (max - min) = (2 - 1) / (28 - 1) = 0.04."
+  },
+  {
+    "id": 82,
+    "question": "Entropy của một tập dữ liệu đạt giá trị BẰNG 0 khi nào?",
+    "options": [
+      "Khi tập dữ liệu hoàn toàn tinh khiết (chỉ thuộc về 1 lớp)",
+      "Khi tỷ lệ các lớp bằng nhau",
+      "Khi không có thuộc tính nào để phân nhánh",
+      "Khi có quá nhiều dữ liệu"
+    ],
+    "answer": 0,
+    "explanation": "Khi tất cả các mẫu đều thuộc về duy nhất 1 lớp (tinh khiết), độ hỗn loạn bằng 0, Entropy(D) = 0."
+  },
+  {
+    "id": 66,
+    "question": "Khoảng cách Manhattan giữa hai điểm A(x1, y1) và B(x2, y2) được tính bằng công thức nào?",
+    "options": [
+      "|x1 - x2| + |y1 - y2|",
+      "sqrt((x1 - x2)^2 + (y1 - y2)^2)",
+      "max(|x1 - x2|, |y1 - y2|)",
+      "(x1*x2 + y1*y2)"
+    ],
+    "answer": 0,
+    "explanation": "Khoảng cách Manhattan (City Block distance) là tổng giá trị tuyệt đối của hiệu các tọa độ: |x1 - x2| + |y1 - y2|."
+  },
+  {
+    "id": 14,
+    "question": "Z-score Standardization (Chuẩn hóa Z-score) đưa dữ liệu về đặc điểm nào?",
+    "options": [
+      "Giá trị nằm trong đoạn [0, 1]",
+      "Trung vị (Median) = 0",
+      "Kỳ vọng (Mean) = 0 và Độ lệch chuẩn (Std Dev) = 1",
+      "Giá trị nằm trong đoạn [-1, 1]"
+    ],
+    "answer": 2,
+    "explanation": "Chuẩn hóa Z-score (hay Standard Scaler) tính theo công thức z = (x - mean) / std, giúp phân phối dữ liệu có kỳ vọng bằng 0 và độ lệch chuẩn bằng 1."
+  },
+  {
+    "id": 196,
+    "question": "Chỉ số Recall (Độ phủ) mang ý nghĩa gì?",
+    "options": [
+      "Phần trăm dự đoán sai",
+      "Trong số những mẫu mô hình dự đoán là Positive, thực tế đúng bao nhiêu %",
+      "Độ chính xác tổng thể",
+      "Trong số những mẫu thực tế là Positive, mô hình dự đoán đúng bao nhiêu %"
+    ],
+    "answer": 3,
+    "explanation": "Recall (hay Sensitivity) = TP / (TP + FN). Đo lường khả năng tìm ra tất cả các mẫu dương tính thực tế."
+  },
+  {
+    "id": 25,
+    "question": "Làm thế nào để xử lý dữ liệu bị thiếu (Missing Values) cho thuộc tính dạng số?",
+    "options": [
+      "Thay bằng giá trị ngẫu nhiên",
+      "Biến đổi thành 0 và 1",
+      "Điền bằng giá trị trung bình (Mean) hoặc trung vị (Median)",
+      "Luôn xóa bỏ các dòng có dữ liệu thiếu"
+    ],
+    "answer": 2,
+    "explanation": "Phương pháp phổ biến nhất để xử lý dữ liệu thiếu cho thuộc tính số học là điền giá trị Mean hoặc Median."
+  },
+  {
+    "id": 77,
+    "question": "Khoảng cách Manhattan giữa điểm P(0, 0) và Q(8, 6) là bao nhiêu?",
+    "options": [
+      "14",
+      "10.00",
+      "48",
+      "8"
+    ],
+    "answer": 0,
+    "explanation": "Khoảng cách Manhattan = |8 - 0| + |6 - 0| = 14."
+  },
+  {
+    "id": 4,
+    "question": "Cho một tập dữ liệu có giá trị nhỏ nhất của thuộc tính A là 8 và lớn nhất là 20. Nếu sử dụng Min-Max Scaling để đưa về đoạn [0, 1], giá trị 11 sẽ được chuẩn hóa thành bao nhiêu?",
+    "options": [
+      "0.25",
+      "0.55",
+      "0.15",
+      "0.35"
+    ],
+    "answer": 0,
+    "explanation": "Công thức Min-Max Scaling: x' = (x - min) / (max - min) = (11 - 8) / (20 - 8) = 0.25."
+  },
+  {
+    "id": 145,
+    "question": "Công thức nào sau đây biểu diễn Định lý Bayes?",
+    "options": [
+      "P(C|X) = P(X|C) + P(C)",
+      "P(C|X) = P(X|C) / P(C)",
+      "P(C|X) = ( P(X|C) * P(C) ) / P(X)",
+      "P(C|X) = P(C) * P(X)"
+    ],
+    "answer": 2,
+    "explanation": "Theo định lý Bayes: Xác suất hậu nghiệm = (Likelihood * Xác suất tiên nghiệm) / Evidence."
+  },
+  {
+    "id": 80,
+    "question": "Khoảng cách Manhattan giữa điểm P(0, 0) và Q(4, 10) là bao nhiêu?",
+    "options": [
+      "14",
+      "10.77",
+      "40",
+      "10"
+    ],
+    "answer": 0,
+    "explanation": "Khoảng cách Manhattan = |4 - 0| + |10 - 0| = 14."
+  },
+  {
+    "id": 110,
+    "question": "Kỹ thuật nào thường được dùng để chống Overfitting cho Cây quyết định?",
+    "options": [
+      "Sử dụng kNN thay thế",
+      "Cắt tỉa cây (Pruning)",
+      "Thêm các đặc trưng ngẫu nhiên",
+      "Chuẩn hóa dữ liệu Min-Max"
+    ],
+    "answer": 1,
+    "explanation": "Pruning (Cắt tỉa) gồm Pre-pruning (Dừng sớm việc xây cây) và Post-pruning (Xây xong rồi tỉa bớt nhánh con) để giảm độ phức tạp của cây."
+  },
+  {
+    "id": 112,
+    "question": "Entropy của một tập dữ liệu đạt giá trị BẰNG 0 khi nào?",
+    "options": [
+      "Khi tập dữ liệu hoàn toàn tinh khiết (chỉ thuộc về 1 lớp)",
+      "Khi tỷ lệ các lớp bằng nhau",
+      "Khi không có thuộc tính nào để phân nhánh",
+      "Khi có quá nhiều dữ liệu"
+    ],
+    "answer": 0,
+    "explanation": "Khi tất cả các mẫu đều thuộc về duy nhất 1 lớp (tinh khiết), độ hỗn loạn bằng 0, Entropy(D) = 0."
+  },
+  {
+    "id": 56,
+    "question": "Khoảng cách Manhattan giữa hai điểm A(x1, y1) và B(x2, y2) được tính bằng công thức nào?",
+    "options": [
+      "|x1 - x2| + |y1 - y2|",
+      "sqrt((x1 - x2)^2 + (y1 - y2)^2)",
+      "max(|x1 - x2|, |y1 - y2|)",
+      "(x1*x2 + y1*y2)"
+    ],
+    "answer": 0,
+    "explanation": "Khoảng cách Manhattan (City Block distance) là tổng giá trị tuyệt đối của hiệu các tọa độ: |x1 - x2| + |y1 - y2|."
+  },
+  {
+    "id": 89,
+    "question": "Information Gain (Độ lợi thông tin) được tính như thế nào?",
+    "options": [
+      "Tổng Entropy(Con) - Entropy(Cha)",
+      "Entropy(Cha) * Entropy(Con)",
+      "Entropy(Cha) - Tổng Entropy(Con) có trọng số",
+      "Gini(Cha) - Gini(Con)"
+    ],
+    "answer": 2,
+    "explanation": "Độ lợi thông tin (IG) đánh giá mức độ giảm độ hỗn loạn: IG = Entropy của tập D ban đầu trừ đi phần kỳ vọng Entropy sau khi chia nhánh."
+  },
+  {
+    "id": 180,
+    "question": "Bài toán dự đoán giá nhà dựa trên diện tích thuộc nhóm bài toán nào?",
+    "options": [
+      "Gom cụm (Clustering)",
+      "Khai phá luật kết hợp (Association Rules)",
+      "Phân lớp (Classification)",
+      "Hồi quy (Regression)"
+    ],
+    "answer": 3,
+    "explanation": "Giá nhà là một biến số thực liên tục, do đó dự đoán giá nhà là bài toán Hồi quy (Regression)."
+  },
+  {
+    "id": 52,
+    "question": "Khoảng cách Euclidean giữa hai điểm A(x1, y1) và B(x2, y2) là:",
+    "options": [
+      "Căn bậc hai của ((x1 - x2)^2 + (y1 - y2)^2)",
+      "|x1 - x2| + |y1 - y2|",
+      "((x1 - x2) + (y1 - y2))^2",
+      "x1*x2 + y1*y2"
+    ],
+    "answer": 0,
+    "explanation": "Khoảng cách Euclidean đo độ dài đường thẳng trực tiếp giữa 2 điểm, dùng định lý Pytago."
+  },
+  {
+    "id": 129,
+    "question": "Một tập dữ liệu D có 4 mẫu, trong đó 2 mẫu thuộc lớp YES và 2 mẫu thuộc lớp NO. Giá trị Entropy(D) là bao nhiêu?",
+    "options": [
+      "-1.0",
+      "1.0",
+      "0.5",
+      "0.0"
+    ],
+    "answer": 1,
+    "explanation": "Tỷ lệ là 2/4 (50%) cho mỗi lớp. Khi xác suất bằng nhau, độ hỗn loạn đạt tối đa nên Entropy = 1."
+  },
+  {
+    "id": 81,
+    "question": "Entropy của một tập dữ liệu đạt giá trị LỚN NHẤT khi nào?",
+    "options": [
+      "Khi số lượng mẫu của các lớp bằng nhau hoàn toàn",
+      "Khi tập dữ liệu chỉ chứa mẫu của một lớp duy nhất",
+      "Khi số lượng mẫu bằng 0",
+      "Khi cây không thể phân nhánh được nữa"
+    ],
+    "answer": 0,
+    "explanation": "Entropy đo lường sự hỗn loạn. Hỗn loạn lớn nhất (Entropy tối đa = 1 đối với bài toán nhị phân) khi tỷ lệ các lớp là 50/50."
+  },
+  {
+    "id": 151,
+    "question": "Thuật toán Naive Bayes dựa trên định lý toán học nào?",
+    "options": [
+      "Bất đẳng thức Markov",
+      "Định lý Pytago",
+      "Định lý Bayes",
+      "Định luật Số lớn"
+    ],
+    "answer": 2,
+    "explanation": "Thuật toán Naive Bayes ứng dụng Định lý Bayes về xác suất có điều kiện P(A|B) = [P(B|A) * P(A)] / P(B)."
+  },
+  {
+    "id": 28,
+    "question": "Thuật toán Cây quyết định (Decision Tree) có cần chuẩn hóa dữ liệu đầu vào (ví dụ Min-Max Scaling) không?",
+    "options": [
+      "Chỉ cần khi phân loại văn bản",
+      "Chỉ cần khi dữ liệu có số âm",
+      "Bắt buộc phải có",
+      "Không cần thiết"
+    ],
+    "answer": 3,
+    "explanation": "Cây quyết định hoạt động dựa trên việc chia rẽ nhánh bằng cách so sánh giá trị (>, <) nên không bị ảnh hưởng bởi thang đo, do đó không cần chuẩn hóa dữ liệu."
+  },
+  {
+    "id": 117,
+    "question": "Entropy của một tập dữ liệu đạt giá trị LỚN NHẤT khi nào?",
+    "options": [
+      "Khi số lượng mẫu của các lớp bằng nhau hoàn toàn",
+      "Khi cây không thể phân nhánh được nữa",
+      "Khi tập dữ liệu chỉ chứa mẫu của một lớp duy nhất",
+      "Khi số lượng mẫu bằng 0"
+    ],
+    "answer": 0,
+    "explanation": "Entropy đo lường sự hỗn loạn. Hỗn loạn lớn nhất (Entropy tối đa = 1 đối với bài toán nhị phân) khi tỷ lệ các lớp là 50/50."
+  },
+  {
+    "id": 7,
+    "question": "Cho một tập dữ liệu có giá trị nhỏ nhất của thuộc tính A là 3 và lớn nhất là 14. Nếu sử dụng Min-Max Scaling để đưa về đoạn [0, 1], giá trị 8 sẽ được chuẩn hóa thành bao nhiêu?",
+    "options": [
+      "0.35",
+      "0.57",
+      "0.45",
+      "0.55"
+    ],
+    "answer": 2,
+    "explanation": "Công thức Min-Max Scaling: x' = (x - min) / (max - min) = (8 - 3) / (14 - 3) = 0.45."
+  },
+  {
+    "id": 79,
+    "question": "Khoảng cách Manhattan giữa điểm P(0, 0) và Q(3, 3) là bao nhiêu?",
+    "options": [
+      "4.24",
+      "9",
+      "3",
+      "6"
+    ],
+    "answer": 3,
+    "explanation": "Khoảng cách Manhattan = |3 - 0| + |3 - 0| = 6."
+  },
+  {
+    "id": 87,
+    "question": "Entropy của một tập dữ liệu đạt giá trị LỚN NHẤT khi nào?",
+    "options": [
+      "Khi cây không thể phân nhánh được nữa",
+      "Khi số lượng mẫu bằng 0",
+      "Khi tập dữ liệu chỉ chứa mẫu của một lớp duy nhất",
+      "Khi số lượng mẫu của các lớp bằng nhau hoàn toàn"
+    ],
+    "answer": 3,
+    "explanation": "Entropy đo lường sự hỗn loạn. Hỗn loạn lớn nhất (Entropy tối đa = 1 đối với bài toán nhị phân) khi tỷ lệ các lớp là 50/50."
+  },
+  {
+    "id": 118,
+    "question": "Entropy của một tập dữ liệu đạt giá trị BẰNG 0 khi nào?",
+    "options": [
+      "Khi không có thuộc tính nào để phân nhánh",
+      "Khi tỷ lệ các lớp bằng nhau",
+      "Khi có quá nhiều dữ liệu",
+      "Khi tập dữ liệu hoàn toàn tinh khiết (chỉ thuộc về 1 lớp)"
+    ],
+    "answer": 3,
+    "explanation": "Khi tất cả các mẫu đều thuộc về duy nhất 1 lớp (tinh khiết), độ hỗn loạn bằng 0, Entropy(D) = 0."
+  },
+  {
+    "id": 115,
+    "question": "Hiện tượng Overfitting trong Cây quyết định thường xảy ra do nguyên nhân nào?",
+    "options": [
+      "Sử dụng sai công thức Entropy",
+      "Cây quá nông",
+      "Cây phát triển quá sâu và chi tiết theo tập huấn luyện",
+      "Không chuẩn hóa dữ liệu"
+    ],
+    "answer": 2,
+    "explanation": "Nếu cây không bị cắt tỉa (pruning) và phát triển tối đa đến khi mọi nút lá đều tinh khiết, nó sẽ học luôn cả nhiễu của dữ liệu, gây ra Overfitting."
+  },
+  {
+    "id": 135,
+    "question": "Công thức nào sau đây biểu diễn Định lý Bayes?",
+    "options": [
+      "P(C|X) = ( P(X|C) * P(C) ) / P(X)",
+      "P(C|X) = P(X|C) / P(C)",
+      "P(C|X) = P(C) * P(X)",
+      "P(C|X) = P(X|C) + P(C)"
+    ],
+    "answer": 0,
+    "explanation": "Theo định lý Bayes: Xác suất hậu nghiệm = (Likelihood * Xác suất tiên nghiệm) / Evidence."
+  },
+  {
+    "id": 93,
+    "question": "Entropy của một tập dữ liệu đạt giá trị LỚN NHẤT khi nào?",
+    "options": [
+      "Khi tập dữ liệu chỉ chứa mẫu của một lớp duy nhất",
+      "Khi số lượng mẫu bằng 0",
+      "Khi số lượng mẫu của các lớp bằng nhau hoàn toàn",
+      "Khi cây không thể phân nhánh được nữa"
+    ],
+    "answer": 2,
+    "explanation": "Entropy đo lường sự hỗn loạn. Hỗn loạn lớn nhất (Entropy tối đa = 1 đối với bài toán nhị phân) khi tỷ lệ các lớp là 50/50."
+  },
+  {
+    "id": 197,
+    "question": "Kỹ thuật K-Fold Cross-Validation dùng để làm gì?",
+    "options": [
+      "Đánh giá độ ổn định và giảm sai lệch khi chia tập train/test",
+      "Giảm chiều dữ liệu",
+      "Tăng tốc độ huấn luyện mô hình",
+      "Chuẩn hóa dữ liệu về [0, 1]"
+    ],
+    "answer": 0,
+    "explanation": "Cross-validation chia dữ liệu thành K phần, huấn luyện K lần luân phiên để đánh giá khả năng tổng quát hóa của mô hình tốt hơn."
+  },
+  {
+    "id": 184,
+    "question": "Chỉ số Recall (Độ phủ) mang ý nghĩa gì?",
+    "options": [
+      "Phần trăm dự đoán sai",
+      "Độ chính xác tổng thể",
+      "Trong số những mẫu mô hình dự đoán là Positive, thực tế đúng bao nhiêu %",
+      "Trong số những mẫu thực tế là Positive, mô hình dự đoán đúng bao nhiêu %"
+    ],
+    "answer": 3,
+    "explanation": "Recall (hay Sensitivity) = TP / (TP + FN). Đo lường khả năng tìm ra tất cả các mẫu dương tính thực tế."
+  },
+  {
+    "id": 134,
+    "question": "Gaussian Naive Bayes thường được áp dụng cho loại dữ liệu nào?",
+    "options": [
+      "Dữ liệu phân loại (Categorical)",
+      "Dữ liệu nhị phân (0, 1)",
+      "Dữ liệu dạng văn bản",
+      "Dữ liệu số thực liên tục (phân phối chuẩn)"
+    ],
+    "answer": 3,
+    "explanation": "Gaussian NB sử dụng hàm mật độ xác suất phân phối chuẩn (Gauss) để tính likelihood cho các thuộc tính mang giá trị số liên tục."
+  },
+  {
+    "id": 100,
+    "question": "Entropy của một tập dữ liệu đạt giá trị BẰNG 0 khi nào?",
+    "options": [
+      "Khi có quá nhiều dữ liệu",
+      "Khi tập dữ liệu hoàn toàn tinh khiết (chỉ thuộc về 1 lớp)",
+      "Khi tỷ lệ các lớp bằng nhau",
+      "Khi không có thuộc tính nào để phân nhánh"
+    ],
+    "answer": 1,
+    "explanation": "Khi tất cả các mẫu đều thuộc về duy nhất 1 lớp (tinh khiết), độ hỗn loạn bằng 0, Entropy(D) = 0."
+  },
+  {
+    "id": 2,
+    "question": "Cho một tập dữ liệu có giá trị nhỏ nhất của thuộc tính A là 8 và lớn nhất là 24. Nếu sử dụng Min-Max Scaling để đưa về đoạn [0, 1], giá trị 21 sẽ được chuẩn hóa thành bao nhiêu?",
+    "options": [
+      "0.81",
+      "0.71",
+      "0.91",
+      "0.88"
+    ],
+    "answer": 0,
+    "explanation": "Công thức Min-Max Scaling: x' = (x - min) / (max - min) = (21 - 8) / (24 - 8) = 0.81."
+  },
+  {
+    "id": 137,
+    "question": "Chữ 'Naive' (Ngây thơ) trong Naive Bayes ngụ ý điều gì?",
+    "options": [
+      "Giả định các thuộc tính đầu vào là Độc lập có điều kiện với nhau",
+      "Nó chỉ dùng cho các bài toán dễ",
+      "Thuật toán này rất đơn giản để lập trình",
+      "Thuật toán luôn đưa ra xác suất sai"
+    ],
+    "answer": 0,
+    "explanation": "Mô hình này 'ngây thơ' giả định rằng sự xuất hiện của một thuộc tính không ảnh hưởng đến các thuộc tính khác khi đã biết nhãn (Độc lập có điều kiện)."
+  },
+  {
+    "id": 141,
+    "question": "Thuật toán Naive Bayes dựa trên định lý toán học nào?",
+    "options": [
+      "Định lý Bayes",
+      "Định lý Pytago",
+      "Định luật Số lớn",
+      "Bất đẳng thức Markov"
+    ],
+    "answer": 0,
+    "explanation": "Thuật toán Naive Bayes ứng dụng Định lý Bayes về xác suất có điều kiện P(A|B) = [P(B|A) * P(A)] / P(B)."
+  },
+  {
+    "id": 189,
+    "question": "Trong bài toán phân loại, Accuracy (Độ chính xác) được tính như thế nào?",
+    "options": [
+      "Số mẫu dự đoán đúng / Tổng số mẫu",
+      "True Positive / (True Positive + False Positive)",
+      "True Positive / (True Positive + False Negative)",
+      "2 * (Precision * Recall) / (Precision + Recall)"
+    ],
+    "answer": 0,
+    "explanation": "Accuracy là tỷ lệ các dự đoán đúng trên toàn bộ tập kiểm thử: (TP + TN) / (TP + TN + FP + FN)."
+  },
+  {
+    "id": 173,
+    "question": "Kỹ thuật K-Fold Cross-Validation dùng để làm gì?",
+    "options": [
+      "Đánh giá độ ổn định và giảm sai lệch khi chia tập train/test",
+      "Giảm chiều dữ liệu",
+      "Tăng tốc độ huấn luyện mô hình",
+      "Chuẩn hóa dữ liệu về [0, 1]"
+    ],
+    "answer": 0,
+    "explanation": "Cross-validation chia dữ liệu thành K phần, huấn luyện K lần luân phiên để đánh giá khả năng tổng quát hóa của mô hình tốt hơn."
+  },
+  {
+    "id": 142,
+    "question": "Chữ 'Naive' (Ngây thơ) trong Naive Bayes ngụ ý điều gì?",
+    "options": [
+      "Nó chỉ dùng cho các bài toán dễ",
+      "Giả định các thuộc tính đầu vào là Độc lập có điều kiện với nhau",
+      "Thuật toán này rất đơn giản để lập trình",
+      "Thuật toán luôn đưa ra xác suất sai"
+    ],
+    "answer": 1,
+    "explanation": "Mô hình này 'ngây thơ' giả định rằng sự xuất hiện của một thuộc tính không ảnh hưởng đến các thuộc tính khác khi đã biết nhãn (Độc lập có điều kiện)."
+  },
+  {
+    "id": 78,
+    "question": "Khoảng cách Manhattan giữa điểm P(0, 0) và Q(2, 7) là bao nhiêu?",
+    "options": [
+      "14",
+      "9",
+      "7",
+      "7.28"
+    ],
+    "answer": 1,
+    "explanation": "Khoảng cách Manhattan = |2 - 0| + |7 - 0| = 9."
+  },
+  {
+    "id": 6,
+    "question": "Cho một tập dữ liệu có giá trị nhỏ nhất của thuộc tính A là 5 và lớn nhất là 31. Nếu sử dụng Min-Max Scaling để đưa về đoạn [0, 1], giá trị 5 sẽ được chuẩn hóa thành bao nhiêu?",
+    "options": [
+      "0.00",
+      "-0.10",
+      "0.10",
+      "0.16"
+    ],
+    "answer": 0,
+    "explanation": "Công thức Min-Max Scaling: x' = (x - min) / (max - min) = (5 - 5) / (31 - 5) = 0.00."
+  },
+  {
+    "id": 18,
+    "question": "Thuật toán Cây quyết định (Decision Tree) có cần chuẩn hóa dữ liệu đầu vào (ví dụ Min-Max Scaling) không?",
+    "options": [
+      "Chỉ cần khi dữ liệu có số âm",
+      "Chỉ cần khi phân loại văn bản",
+      "Bắt buộc phải có",
+      "Không cần thiết"
+    ],
+    "answer": 3,
+    "explanation": "Cây quyết định hoạt động dựa trên việc chia rẽ nhánh bằng cách so sánh giá trị (>, <) nên không bị ảnh hưởng bởi thang đo, do đó không cần chuẩn hóa dữ liệu."
+  },
+  {
+    "id": 186,
+    "question": "Bài toán dự đoán giá nhà dựa trên diện tích thuộc nhóm bài toán nào?",
+    "options": [
+      "Hồi quy (Regression)",
+      "Phân lớp (Classification)",
+      "Gom cụm (Clustering)",
+      "Khai phá luật kết hợp (Association Rules)"
+    ],
+    "answer": 0,
+    "explanation": "Giá nhà là một biến số thực liên tục, do đó dự đoán giá nhà là bài toán Hồi quy (Regression)."
+  },
+  {
+    "id": 133,
+    "question": "Khi gặp một giá trị thuộc tính chưa từng xuất hiện trong tập huấn luyện (Xác suất bằng 0), Naive Bayes sẽ gặp lỗi gì và cách khắc phục?",
+    "options": [
+      "Underfitting / Khắc phục bằng K-Fold",
+      "Overfitting / Khắc phục bằng Pruning",
+      "Zero Probability / Khắc phục bằng Laplace Smoothing",
+      "Missing Value / Khắc phục bằng Mean"
+    ],
+    "answer": 2,
+    "explanation": "Khi một xác suất bằng 0, do phép nhân nên toàn bộ likelihood bằng 0. Laplace Smoothing (+1 vào tử số) được dùng để giải quyết."
+  },
+  {
+    "id": 156,
+    "question": "Thuật toán Naive Bayes dựa trên định lý toán học nào?",
+    "options": [
+      "Định lý Bayes",
+      "Định lý Pytago",
+      "Bất đẳng thức Markov",
+      "Định luật Số lớn"
+    ],
+    "answer": 0,
+    "explanation": "Thuật toán Naive Bayes ứng dụng Định lý Bayes về xác suất có điều kiện P(A|B) = [P(B|A) * P(A)] / P(B)."
+  },
+  {
+    "id": 20,
+    "question": "Làm thế nào để xử lý dữ liệu bị thiếu (Missing Values) cho thuộc tính dạng số?",
+    "options": [
+      "Biến đổi thành 0 và 1",
+      "Thay bằng giá trị ngẫu nhiên",
+      "Luôn xóa bỏ các dòng có dữ liệu thiếu",
+      "Điền bằng giá trị trung bình (Mean) hoặc trung vị (Median)"
+    ],
+    "answer": 3,
+    "explanation": "Phương pháp phổ biến nhất để xử lý dữ liệu thiếu cho thuộc tính số học là điền giá trị Mean hoặc Median."
+  },
+  {
+    "id": 22,
+    "question": "Thuật toán nào sau đây nhạy cảm nhất với việc không chuẩn hóa dữ liệu?",
+    "options": [
+      "Random Forest",
+      "Decision Tree (Cây quyết định)",
+      "k-Nearest Neighbors (kNN)",
+      "Naive Bayes"
+    ],
+    "answer": 2,
+    "explanation": "kNN tính toán dựa trên khoảng cách (Euclidean/Manhattan) giữa các điểm, do đó nếu không chuẩn hóa, các thuộc tính có miền giá trị lớn sẽ áp đảo kết quả."
+  },
+  {
+    "id": 167,
+    "question": "Chữ 'Naive' (Ngây thơ) trong Naive Bayes ngụ ý điều gì?",
+    "options": [
+      "Thuật toán này rất đơn giản để lập trình",
+      "Thuật toán luôn đưa ra xác suất sai",
+      "Nó chỉ dùng cho các bài toán dễ",
+      "Giả định các thuộc tính đầu vào là Độc lập có điều kiện với nhau"
+    ],
+    "answer": 3,
+    "explanation": "Mô hình này 'ngây thơ' giả định rằng sự xuất hiện của một thuộc tính không ảnh hưởng đến các thuộc tính khác khi đã biết nhãn (Độc lập có điều kiện)."
+  },
+  {
+    "id": 158,
+    "question": "Khi gặp một giá trị thuộc tính chưa từng xuất hiện trong tập huấn luyện (Xác suất bằng 0), Naive Bayes sẽ gặp lỗi gì và cách khắc phục?",
+    "options": [
+      "Overfitting / Khắc phục bằng Pruning",
+      "Missing Value / Khắc phục bằng Mean",
+      "Zero Probability / Khắc phục bằng Laplace Smoothing",
+      "Underfitting / Khắc phục bằng K-Fold"
+    ],
+    "answer": 2,
+    "explanation": "Khi một xác suất bằng 0, do phép nhân nên toàn bộ likelihood bằng 0. Laplace Smoothing (+1 vào tử số) được dùng để giải quyết."
+  },
+  {
+    "id": 34,
+    "question": "Z-score Standardization (Chuẩn hóa Z-score) đưa dữ liệu về đặc điểm nào?",
+    "options": [
+      "Trung vị (Median) = 0",
+      "Giá trị nằm trong đoạn [-1, 1]",
+      "Giá trị nằm trong đoạn [0, 1]",
+      "Kỳ vọng (Mean) = 0 và Độ lệch chuẩn (Std Dev) = 1"
+    ],
+    "answer": 3,
+    "explanation": "Chuẩn hóa Z-score (hay Standard Scaler) tính theo công thức z = (x - mean) / std, giúp phân phối dữ liệu có kỳ vọng bằng 0 và độ lệch chuẩn bằng 1."
+  },
+  {
+    "id": 183,
+    "question": "Trong bài toán phân loại, Accuracy (Độ chính xác) được tính như thế nào?",
+    "options": [
+      "2 * (Precision * Recall) / (Precision + Recall)",
+      "True Positive / (True Positive + False Negative)",
+      "True Positive / (True Positive + False Positive)",
+      "Số mẫu dự đoán đúng / Tổng số mẫu"
+    ],
+    "answer": 3,
+    "explanation": "Accuracy là tỷ lệ các dự đoán đúng trên toàn bộ tập kiểm thử: (TP + TN) / (TP + TN + FP + FN)."
+  },
+  {
+    "id": 67,
+    "question": "Khoảng cách Euclidean giữa hai điểm A(x1, y1) và B(x2, y2) là:",
+    "options": [
+      "x1*x2 + y1*y2",
+      "|x1 - x2| + |y1 - y2|",
+      "Căn bậc hai của ((x1 - x2)^2 + (y1 - y2)^2)",
+      "((x1 - x2) + (y1 - y2))^2"
+    ],
+    "answer": 2,
+    "explanation": "Khoảng cách Euclidean đo độ dài đường thẳng trực tiếp giữa 2 điểm, dùng định lý Pytago."
+  },
+  {
+    "id": 187,
+    "question": "Bài toán dự đoán email là Spam hay Non-Spam thuộc nhóm bài toán nào?",
+    "options": [
+      "Học không giám sát",
+      "Gom cụm (Clustering)",
+      "Hồi quy (Regression)",
+      "Phân lớp (Classification)"
+    ],
+    "answer": 3,
+    "explanation": "Phân loại vào các nhãn rời rạc (Spam/Non-Spam) là bài toán Phân lớp."
+  },
+  {
+    "id": 159,
+    "question": "Gaussian Naive Bayes thường được áp dụng cho loại dữ liệu nào?",
+    "options": [
+      "Dữ liệu nhị phân (0, 1)",
+      "Dữ liệu số thực liên tục (phân phối chuẩn)",
+      "Dữ liệu dạng văn bản",
+      "Dữ liệu phân loại (Categorical)"
+    ],
+    "answer": 1,
+    "explanation": "Gaussian NB sử dụng hàm mật độ xác suất phân phối chuẩn (Gauss) để tính likelihood cho các thuộc tính mang giá trị số liên tục."
+  },
+  {
+    "id": 153,
+    "question": "Khi gặp một giá trị thuộc tính chưa từng xuất hiện trong tập huấn luyện (Xác suất bằng 0), Naive Bayes sẽ gặp lỗi gì và cách khắc phục?",
+    "options": [
+      "Missing Value / Khắc phục bằng Mean",
+      "Underfitting / Khắc phục bằng K-Fold",
+      "Overfitting / Khắc phục bằng Pruning",
+      "Zero Probability / Khắc phục bằng Laplace Smoothing"
+    ],
+    "answer": 3,
+    "explanation": "Khi một xác suất bằng 0, do phép nhân nên toàn bộ likelihood bằng 0. Laplace Smoothing (+1 vào tử số) được dùng để giải quyết."
+  },
+  {
+    "id": 174,
+    "question": "Bài toán dự đoán giá nhà dựa trên diện tích thuộc nhóm bài toán nào?",
+    "options": [
+      "Hồi quy (Regression)",
+      "Phân lớp (Classification)",
+      "Khai phá luật kết hợp (Association Rules)",
+      "Gom cụm (Clustering)"
+    ],
+    "answer": 0,
+    "explanation": "Giá nhà là một biến số thực liên tục, do đó dự đoán giá nhà là bài toán Hồi quy (Regression)."
+  },
+  {
+    "id": 70,
+    "question": "kNN thuộc nhóm thuật toán học máy nào?",
+    "options": [
+      "Học không giám sát (Unsupervised Learning)",
+      "Eager Learning (Học háo hức)",
+      "Học có giám sát (Supervised Learning) - Lazy Learning",
+      "Học tăng cường (Reinforcement Learning)"
+    ],
+    "answer": 2,
+    "explanation": "kNN là thuật toán học có giám sát dựa trên khoảng cách. Được gọi là Lazy Learning vì nó không xây dựng một mô hình toán học khái quát mà chỉ lưu trữ lại toàn bộ tập huấn luyện."
+  },
+  {
+    "id": 54,
+    "question": "Việc chọn k = 1 trong thuật toán kNN có thể dẫn đến hiện tượng gì?",
+    "options": [
+      "Overfitting (Quá khớp)",
+      "High Bias",
+      "Thuật toán chạy chậm nhất",
+      "Underfitting (Chưa khớp)"
+    ],
+    "answer": 0,
+    "explanation": "Khi k=1, mô hình trở nên quá nhạy cảm với nhiễu (noise) của từng điểm dữ liệu học, dẫn đến hiện tượng Overfitting."
+  },
+  {
+    "id": 63,
+    "question": "Trong thuật toán kNN, k đại diện cho điều gì?",
+    "options": [
+      "Số lượng láng giềng gần nhất được xét",
+      "Số chiều của không gian đặc trưng",
+      "Số cụm dữ liệu phân chia",
+      "Số lần lặp của thuật toán"
+    ],
+    "answer": 0,
+    "explanation": "Chữ k trong kNN viết tắt cho k-Nearest Neighbors, tức là xét k hàng xóm gần nhất để bỏ phiếu đưa ra dự đoán."
+  },
+  {
+    "id": 106,
+    "question": "Entropy của một tập dữ liệu đạt giá trị BẰNG 0 khi nào?",
+    "options": [
+      "Khi tập dữ liệu hoàn toàn tinh khiết (chỉ thuộc về 1 lớp)",
+      "Khi tỷ lệ các lớp bằng nhau",
+      "Khi có quá nhiều dữ liệu",
+      "Khi không có thuộc tính nào để phân nhánh"
+    ],
+    "answer": 0,
+    "explanation": "Khi tất cả các mẫu đều thuộc về duy nhất 1 lớp (tinh khiết), độ hỗn loạn bằng 0, Entropy(D) = 0."
+  },
+  {
+    "id": 185,
+    "question": "Kỹ thuật K-Fold Cross-Validation dùng để làm gì?",
+    "options": [
+      "Đánh giá độ ổn định và giảm sai lệch khi chia tập train/test",
+      "Tăng tốc độ huấn luyện mô hình",
+      "Chuẩn hóa dữ liệu về [0, 1]",
+      "Giảm chiều dữ liệu"
+    ],
+    "answer": 0,
+    "explanation": "Cross-validation chia dữ liệu thành K phần, huấn luyện K lần luân phiên để đánh giá khả năng tổng quát hóa của mô hình tốt hơn."
+  },
+  {
+    "id": 60,
+    "question": "kNN thuộc nhóm thuật toán học máy nào?",
+    "options": [
+      "Eager Learning (Học háo hức)",
+      "Học không giám sát (Unsupervised Learning)",
+      "Học có giám sát (Supervised Learning) - Lazy Learning",
+      "Học tăng cường (Reinforcement Learning)"
+    ],
+    "answer": 2,
+    "explanation": "kNN là thuật toán học có giám sát dựa trên khoảng cách. Được gọi là Lazy Learning vì nó không xây dựng một mô hình toán học khái quát mà chỉ lưu trữ lại toàn bộ tập huấn luyện."
+  },
+  {
+    "id": 128,
+    "question": "Một tập dữ liệu D có 6 mẫu, trong đó 3 mẫu thuộc lớp YES và 3 mẫu thuộc lớp NO. Giá trị Entropy(D) là bao nhiêu?",
+    "options": [
+      "-1.0",
+      "0.5",
+      "0.0",
+      "1.0"
+    ],
+    "answer": 3,
+    "explanation": "Tỷ lệ là 3/6 (50%) cho mỗi lớp. Khi xác suất bằng nhau, độ hỗn loạn đạt tối đa nên Entropy = 1."
+  },
+  {
+    "id": 3,
+    "question": "Cho một tập dữ liệu có giá trị nhỏ nhất của thuộc tính A là 1 và lớn nhất là 11. Nếu sử dụng Min-Max Scaling để đưa về đoạn [0, 1], giá trị 8 sẽ được chuẩn hóa thành bao nhiêu?",
+    "options": [
+      "0.70",
+      "0.60",
+      "0.73",
+      "0.80"
+    ],
+    "answer": 0,
+    "explanation": "Công thức Min-Max Scaling: x' = (x - min) / (max - min) = (8 - 1) / (11 - 1) = 0.70."
+  },
+  {
+    "id": 44,
+    "question": "Việc chọn k = 1 trong thuật toán kNN có thể dẫn đến hiện tượng gì?",
+    "options": [
+      "Thuật toán chạy chậm nhất",
+      "High Bias",
+      "Underfitting (Chưa khớp)",
+      "Overfitting (Quá khớp)"
+    ],
+    "answer": 3,
+    "explanation": "Khi k=1, mô hình trở nên quá nhạy cảm với nhiễu (noise) của từng điểm dữ liệu học, dẫn đến hiện tượng Overfitting."
+  },
+  {
+    "id": 192,
+    "question": "Bài toán dự đoán giá nhà dựa trên diện tích thuộc nhóm bài toán nào?",
+    "options": [
+      "Gom cụm (Clustering)",
+      "Phân lớp (Classification)",
+      "Khai phá luật kết hợp (Association Rules)",
+      "Hồi quy (Regression)"
+    ],
+    "answer": 3,
+    "explanation": "Giá nhà là một biến số thực liên tục, do đó dự đoán giá nhà là bài toán Hồi quy (Regression)."
+  },
+  {
+    "id": 91,
+    "question": "Hiện tượng Overfitting trong Cây quyết định thường xảy ra do nguyên nhân nào?",
+    "options": [
+      "Sử dụng sai công thức Entropy",
+      "Không chuẩn hóa dữ liệu",
+      "Cây quá nông",
+      "Cây phát triển quá sâu và chi tiết theo tập huấn luyện"
+    ],
+    "answer": 3,
+    "explanation": "Nếu cây không bị cắt tỉa (pruning) và phát triển tối đa đến khi mọi nút lá đều tinh khiết, nó sẽ học luôn cả nhiễu của dữ liệu, gây ra Overfitting."
+  },
+  {
+    "id": 136,
+    "question": "Thuật toán Naive Bayes dựa trên định lý toán học nào?",
+    "options": [
+      "Định lý Bayes",
+      "Định lý Pytago",
+      "Định luật Số lớn",
+      "Bất đẳng thức Markov"
+    ],
+    "answer": 0,
+    "explanation": "Thuật toán Naive Bayes ứng dụng Định lý Bayes về xác suất có điều kiện P(A|B) = [P(B|A) * P(A)] / P(B)."
+  },
+  {
+    "id": 42,
+    "question": "Khoảng cách Euclidean giữa hai điểm A(x1, y1) và B(x2, y2) là:",
+    "options": [
+      "((x1 - x2) + (y1 - y2))^2",
+      "x1*x2 + y1*y2",
+      "|x1 - x2| + |y1 - y2|",
+      "Căn bậc hai của ((x1 - x2)^2 + (y1 - y2)^2)"
+    ],
+    "answer": 3,
+    "explanation": "Khoảng cách Euclidean đo độ dài đường thẳng trực tiếp giữa 2 điểm, dùng định lý Pytago."
+  },
+  {
+    "id": 188,
+    "question": "Một Confusion Matrix (Ma trận nhầm lẫn) của bài toán phân loại nhị phân có kích thước là bao nhiêu?",
+    "options": [
+      "1x2",
+      "Nhiều chiều tùy dữ liệu",
+      "3x3",
+      "2x2"
+    ],
+    "answer": 3,
+    "explanation": "Bài toán nhị phân có 2 lớp (Positive, Negative) nên ma trận có kích thước 2x2 chứa TP, TN, FP, FN."
+  },
+  {
+    "id": 172,
+    "question": "Chỉ số Recall (Độ phủ) mang ý nghĩa gì?",
+    "options": [
+      "Trong số những mẫu thực tế là Positive, mô hình dự đoán đúng bao nhiêu %",
+      "Độ chính xác tổng thể",
+      "Phần trăm dự đoán sai",
+      "Trong số những mẫu mô hình dự đoán là Positive, thực tế đúng bao nhiêu %"
+    ],
+    "answer": 0,
+    "explanation": "Recall (hay Sensitivity) = TP / (TP + FN). Đo lường khả năng tìm ra tất cả các mẫu dương tính thực tế."
+  },
+  {
+    "id": 109,
+    "question": "Hiện tượng Overfitting trong Cây quyết định thường xảy ra do nguyên nhân nào?",
+    "options": [
+      "Không chuẩn hóa dữ liệu",
+      "Sử dụng sai công thức Entropy",
+      "Cây phát triển quá sâu và chi tiết theo tập huấn luyện",
+      "Cây quá nông"
+    ],
+    "answer": 2,
+    "explanation": "Nếu cây không bị cắt tỉa (pruning) và phát triển tối đa đến khi mọi nút lá đều tinh khiết, nó sẽ học luôn cả nhiễu của dữ liệu, gây ra Overfitting."
+  },
+  {
+    "id": 71,
+    "question": "Khoảng cách Manhattan giữa điểm P(0, 0) và Q(4, 5) là bao nhiêu?",
+    "options": [
+      "5",
+      "20",
+      "6.40",
+      "9"
+    ],
+    "answer": 3,
+    "explanation": "Khoảng cách Manhattan = |4 - 0| + |5 - 0| = 9."
+  },
+  {
+    "id": 23,
+    "question": "Thuật toán Cây quyết định (Decision Tree) có cần chuẩn hóa dữ liệu đầu vào (ví dụ Min-Max Scaling) không?",
+    "options": [
+      "Không cần thiết",
+      "Bắt buộc phải có",
+      "Chỉ cần khi dữ liệu có số âm",
+      "Chỉ cần khi phân loại văn bản"
+    ],
+    "answer": 0,
+    "explanation": "Cây quyết định hoạt động dựa trên việc chia rẽ nhánh bằng cách so sánh giá trị (>, <) nên không bị ảnh hưởng bởi thang đo, do đó không cần chuẩn hóa dữ liệu."
+  },
+  {
+    "id": 84,
+    "question": "Trong thuật toán ID3 tạo Cây quyết định, thuộc tính nào sẽ được chọn làm Nút Gốc (Root Node)?",
+    "options": [
+      "Thuộc tính có Information Gain LỚN NHẤT",
+      "Thuộc tính có Information Gain NHỎ NHẤT",
+      "Thuộc tính có Entropy LỚN NHẤT",
+      "Thuộc tính có ít giá trị phân biệt nhất"
+    ],
+    "answer": 0,
+    "explanation": "Thuật toán sẽ tham lam chọn thuộc tính mang lại Độ lợi thông tin lớn nhất để chia nhanh nhất các tập thành tinh khiết."
+  },
+  {
+    "id": 53,
+    "question": "Trong thuật toán kNN, k đại diện cho điều gì?",
+    "options": [
+      "Số lần lặp của thuật toán",
+      "Số chiều của không gian đặc trưng",
+      "Số lượng láng giềng gần nhất được xét",
+      "Số cụm dữ liệu phân chia"
+    ],
+    "answer": 2,
+    "explanation": "Chữ k trong kNN viết tắt cho k-Nearest Neighbors, tức là xét k hàng xóm gần nhất để bỏ phiếu đưa ra dự đoán."
+  },
+  {
+    "id": 72,
+    "question": "Khoảng cách Manhattan giữa điểm P(0, 0) và Q(10, 1) là bao nhiêu?",
+    "options": [
+      "10",
+      "Đáp án khác rnjf",
+      "10.05",
+      "11"
+    ],
+    "answer": 3,
+    "explanation": "Khoảng cách Manhattan = |10 - 0| + |1 - 0| = 11."
+  },
+  {
+    "id": 113,
+    "question": "Information Gain (Độ lợi thông tin) được tính như thế nào?",
+    "options": [
+      "Gini(Cha) - Gini(Con)",
+      "Tổng Entropy(Con) - Entropy(Cha)",
+      "Entropy(Cha) - Tổng Entropy(Con) có trọng số",
+      "Entropy(Cha) * Entropy(Con)"
+    ],
+    "answer": 2,
+    "explanation": "Độ lợi thông tin (IG) đánh giá mức độ giảm độ hỗn loạn: IG = Entropy của tập D ban đầu trừ đi phần kỳ vọng Entropy sau khi chia nhánh."
+  },
+  {
+    "id": 143,
+    "question": "Khi gặp một giá trị thuộc tính chưa từng xuất hiện trong tập huấn luyện (Xác suất bằng 0), Naive Bayes sẽ gặp lỗi gì và cách khắc phục?",
+    "options": [
+      "Zero Probability / Khắc phục bằng Laplace Smoothing",
+      "Overfitting / Khắc phục bằng Pruning",
+      "Underfitting / Khắc phục bằng K-Fold",
+      "Missing Value / Khắc phục bằng Mean"
+    ],
+    "answer": 0,
+    "explanation": "Khi một xác suất bằng 0, do phép nhân nên toàn bộ likelihood bằng 0. Laplace Smoothing (+1 vào tử số) được dùng để giải quyết."
+  },
+  {
+    "id": 155,
+    "question": "Công thức nào sau đây biểu diễn Định lý Bayes?",
+    "options": [
+      "P(C|X) = ( P(X|C) * P(C) ) / P(X)",
+      "P(C|X) = P(X|C) / P(C)",
+      "P(C|X) = P(X|C) + P(C)",
+      "P(C|X) = P(C) * P(X)"
+    ],
+    "answer": 0,
+    "explanation": "Theo định lý Bayes: Xác suất hậu nghiệm = (Likelihood * Xác suất tiên nghiệm) / Evidence."
+  },
+  {
+    "id": 191,
+    "question": "Kỹ thuật K-Fold Cross-Validation dùng để làm gì?",
+    "options": [
+      "Đánh giá độ ổn định và giảm sai lệch khi chia tập train/test",
+      "Tăng tốc độ huấn luyện mô hình",
+      "Chuẩn hóa dữ liệu về [0, 1]",
+      "Giảm chiều dữ liệu"
+    ],
+    "answer": 0,
+    "explanation": "Cross-validation chia dữ liệu thành K phần, huấn luyện K lần luân phiên để đánh giá khả năng tổng quát hóa của mô hình tốt hơn."
+  },
+  {
+    "id": 161,
+    "question": "Thuật toán Naive Bayes dựa trên định lý toán học nào?",
+    "options": [
+      "Bất đẳng thức Markov",
+      "Định luật Số lớn",
+      "Định lý Pytago",
+      "Định lý Bayes"
+    ],
+    "answer": 3,
+    "explanation": "Thuật toán Naive Bayes ứng dụng Định lý Bayes về xác suất có điều kiện P(A|B) = [P(B|A) * P(A)] / P(B)."
+  },
+  {
+    "id": 116,
+    "question": "Kỹ thuật nào thường được dùng để chống Overfitting cho Cây quyết định?",
+    "options": [
+      "Thêm các đặc trưng ngẫu nhiên",
+      "Chuẩn hóa dữ liệu Min-Max",
+      "Cắt tỉa cây (Pruning)",
+      "Sử dụng kNN thay thế"
+    ],
+    "answer": 2,
+    "explanation": "Pruning (Cắt tỉa) gồm Pre-pruning (Dừng sớm việc xây cây) và Post-pruning (Xây xong rồi tỉa bớt nhánh con) để giảm độ phức tạp của cây."
+  },
+  {
+    "id": 178,
+    "question": "Chỉ số Recall (Độ phủ) mang ý nghĩa gì?",
+    "options": [
+      "Trong số những mẫu mô hình dự đoán là Positive, thực tế đúng bao nhiêu %",
+      "Độ chính xác tổng thể",
+      "Phần trăm dự đoán sai",
+      "Trong số những mẫu thực tế là Positive, mô hình dự đoán đúng bao nhiêu %"
+    ],
+    "answer": 3,
+    "explanation": "Recall (hay Sensitivity) = TP / (TP + FN). Đo lường khả năng tìm ra tất cả các mẫu dương tính thực tế."
+  },
+  {
+    "id": 125,
+    "question": "Một tập dữ liệu D có 2 mẫu, trong đó 1 mẫu thuộc lớp YES và 1 mẫu thuộc lớp NO. Giá trị Entropy(D) là bao nhiêu?",
+    "options": [
+      "0.0",
+      "1.0",
+      "0.5",
+      "-1.0"
+    ],
+    "answer": 1,
+    "explanation": "Tỷ lệ là 1/2 (50%) cho mỗi lớp. Khi xác suất bằng nhau, độ hỗn loạn đạt tối đa nên Entropy = 1."
+  },
+  {
+    "id": 182,
+    "question": "Một Confusion Matrix (Ma trận nhầm lẫn) của bài toán phân loại nhị phân có kích thước là bao nhiêu?",
+    "options": [
+      "3x3",
+      "Nhiều chiều tùy dữ liệu",
+      "2x2",
+      "1x2"
+    ],
+    "answer": 2,
+    "explanation": "Bài toán nhị phân có 2 lớp (Positive, Negative) nên ma trận có kích thước 2x2 chứa TP, TN, FP, FN."
+  },
+  {
+    "id": 175,
+    "question": "Bài toán dự đoán email là Spam hay Non-Spam thuộc nhóm bài toán nào?",
+    "options": [
+      "Phân lớp (Classification)",
+      "Học không giám sát",
+      "Hồi quy (Regression)",
+      "Gom cụm (Clustering)"
+    ],
+    "answer": 0,
+    "explanation": "Phân loại vào các nhãn rời rạc (Spam/Non-Spam) là bài toán Phân lớp."
+  },
+  {
+    "id": 124,
+    "question": "Một tập dữ liệu D có 8 mẫu, trong đó 4 mẫu thuộc lớp YES và 4 mẫu thuộc lớp NO. Giá trị Entropy(D) là bao nhiêu?",
+    "options": [
+      "1.0",
+      "0.0",
+      "-1.0",
+      "0.5"
+    ],
+    "answer": 0,
+    "explanation": "Tỷ lệ là 4/8 (50%) cho mỗi lớp. Khi xác suất bằng nhau, độ hỗn loạn đạt tối đa nên Entropy = 1."
+  },
+  {
+    "id": 199,
+    "question": "Bài toán dự đoán email là Spam hay Non-Spam thuộc nhóm bài toán nào?",
+    "options": [
+      "Phân lớp (Classification)",
+      "Hồi quy (Regression)",
+      "Gom cụm (Clustering)",
+      "Học không giám sát"
+    ],
+    "answer": 0,
+    "explanation": "Phân loại vào các nhãn rời rạc (Spam/Non-Spam) là bài toán Phân lớp."
+  },
+  {
+    "id": 101,
+    "question": "Information Gain (Độ lợi thông tin) được tính như thế nào?",
+    "options": [
+      "Gini(Cha) - Gini(Con)",
+      "Entropy(Cha) - Tổng Entropy(Con) có trọng số",
+      "Tổng Entropy(Con) - Entropy(Cha)",
+      "Entropy(Cha) * Entropy(Con)"
+    ],
+    "answer": 1,
+    "explanation": "Độ lợi thông tin (IG) đánh giá mức độ giảm độ hỗn loạn: IG = Entropy của tập D ban đầu trừ đi phần kỳ vọng Entropy sau khi chia nhánh."
+  },
+  {
+    "id": 126,
+    "question": "Một tập dữ liệu D có 2 mẫu, trong đó 1 mẫu thuộc lớp YES và 1 mẫu thuộc lớp NO. Giá trị Entropy(D) là bao nhiêu?",
+    "options": [
+      "1.0",
+      "0.0",
+      "0.5",
+      "-1.0"
+    ],
+    "answer": 0,
+    "explanation": "Tỷ lệ là 1/2 (50%) cho mỗi lớp. Khi xác suất bằng nhau, độ hỗn loạn đạt tối đa nên Entropy = 1."
+  },
+  {
+    "id": 154,
+    "question": "Gaussian Naive Bayes thường được áp dụng cho loại dữ liệu nào?",
+    "options": [
+      "Dữ liệu số thực liên tục (phân phối chuẩn)",
+      "Dữ liệu dạng văn bản",
+      "Dữ liệu nhị phân (0, 1)",
+      "Dữ liệu phân loại (Categorical)"
+    ],
+    "answer": 0,
+    "explanation": "Gaussian NB sử dụng hàm mật độ xác suất phân phối chuẩn (Gauss) để tính likelihood cho các thuộc tính mang giá trị số liên tục."
+  },
+  {
+    "id": 193,
+    "question": "Bài toán dự đoán email là Spam hay Non-Spam thuộc nhóm bài toán nào?",
+    "options": [
+      "Phân lớp (Classification)",
+      "Học không giám sát",
+      "Hồi quy (Regression)",
+      "Gom cụm (Clustering)"
+    ],
+    "answer": 0,
+    "explanation": "Phân loại vào các nhãn rời rạc (Spam/Non-Spam) là bài toán Phân lớp."
+  },
+  {
+    "id": 157,
+    "question": "Chữ 'Naive' (Ngây thơ) trong Naive Bayes ngụ ý điều gì?",
+    "options": [
+      "Thuật toán luôn đưa ra xác suất sai",
+      "Thuật toán này rất đơn giản để lập trình",
+      "Nó chỉ dùng cho các bài toán dễ",
+      "Giả định các thuộc tính đầu vào là Độc lập có điều kiện với nhau"
+    ],
+    "answer": 3,
+    "explanation": "Mô hình này 'ngây thơ' giả định rằng sự xuất hiện của một thuộc tính không ảnh hưởng đến các thuộc tính khác khi đã biết nhãn (Độc lập có điều kiện)."
+  },
+  {
+    "id": 104,
+    "question": "Kỹ thuật nào thường được dùng để chống Overfitting cho Cây quyết định?",
+    "options": [
+      "Thêm các đặc trưng ngẫu nhiên",
+      "Sử dụng kNN thay thế",
+      "Chuẩn hóa dữ liệu Min-Max",
+      "Cắt tỉa cây (Pruning)"
+    ],
+    "answer": 3,
+    "explanation": "Pruning (Cắt tỉa) gồm Pre-pruning (Dừng sớm việc xây cây) và Post-pruning (Xây xong rồi tỉa bớt nhánh con) để giảm độ phức tạp của cây."
+  },
+  {
+    "id": 131,
+    "question": "Thuật toán Naive Bayes dựa trên định lý toán học nào?",
+    "options": [
+      "Định lý Bayes",
+      "Định lý Pytago",
+      "Bất đẳng thức Markov",
+      "Định luật Số lớn"
+    ],
+    "answer": 0,
+    "explanation": "Thuật toán Naive Bayes ứng dụng Định lý Bayes về xác suất có điều kiện P(A|B) = [P(B|A) * P(A)] / P(B)."
+  },
+  {
+    "id": 127,
+    "question": "Một tập dữ liệu D có 2 mẫu, trong đó 1 mẫu thuộc lớp YES và 1 mẫu thuộc lớp NO. Giá trị Entropy(D) là bao nhiêu?",
+    "options": [
+      "1.0",
+      "0.0",
+      "0.5",
+      "-1.0"
+    ],
+    "answer": 0,
+    "explanation": "Tỷ lệ là 1/2 (50%) cho mỗi lớp. Khi xác suất bằng nhau, độ hỗn loạn đạt tối đa nên Entropy = 1."
+  },
+  {
+    "id": 169,
+    "question": "Gaussian Naive Bayes thường được áp dụng cho loại dữ liệu nào?",
+    "options": [
+      "Dữ liệu dạng văn bản",
+      "Dữ liệu phân loại (Categorical)",
+      "Dữ liệu nhị phân (0, 1)",
+      "Dữ liệu số thực liên tục (phân phối chuẩn)"
+    ],
+    "answer": 3,
+    "explanation": "Gaussian NB sử dụng hàm mật độ xác suất phân phối chuẩn (Gauss) để tính likelihood cho các thuộc tính mang giá trị số liên tục."
+  },
+  {
+    "id": 150,
+    "question": "Công thức nào sau đây biểu diễn Định lý Bayes?",
+    "options": [
+      "P(C|X) = P(X|C) + P(C)",
+      "P(C|X) = P(C) * P(X)",
+      "P(C|X) = P(X|C) / P(C)",
+      "P(C|X) = ( P(X|C) * P(C) ) / P(X)"
+    ],
+    "answer": 3,
+    "explanation": "Theo định lý Bayes: Xác suất hậu nghiệm = (Likelihood * Xác suất tiên nghiệm) / Evidence."
+  },
+  {
+    "id": 170,
+    "question": "Công thức nào sau đây biểu diễn Định lý Bayes?",
+    "options": [
+      "P(C|X) = P(C) * P(X)",
+      "P(C|X) = P(X|C) / P(C)",
+      "P(C|X) = ( P(X|C) * P(C) ) / P(X)",
+      "P(C|X) = P(X|C) + P(C)"
+    ],
+    "answer": 2,
+    "explanation": "Theo định lý Bayes: Xác suất hậu nghiệm = (Likelihood * Xác suất tiên nghiệm) / Evidence."
+  },
+  {
+    "id": 107,
+    "question": "Information Gain (Độ lợi thông tin) được tính như thế nào?",
+    "options": [
+      "Tổng Entropy(Con) - Entropy(Cha)",
+      "Gini(Cha) - Gini(Con)",
+      "Entropy(Cha) * Entropy(Con)",
+      "Entropy(Cha) - Tổng Entropy(Con) có trọng số"
+    ],
+    "answer": 3,
+    "explanation": "Độ lợi thông tin (IG) đánh giá mức độ giảm độ hỗn loạn: IG = Entropy của tập D ban đầu trừ đi phần kỳ vọng Entropy sau khi chia nhánh."
+  },
+  {
+    "id": 140,
+    "question": "Công thức nào sau đây biểu diễn Định lý Bayes?",
+    "options": [
+      "P(C|X) = P(X|C) + P(C)",
+      "P(C|X) = P(C) * P(X)",
+      "P(C|X) = P(X|C) / P(C)",
+      "P(C|X) = ( P(X|C) * P(C) ) / P(X)"
+    ],
+    "answer": 3,
+    "explanation": "Theo định lý Bayes: Xác suất hậu nghiệm = (Likelihood * Xác suất tiên nghiệm) / Evidence."
+  },
+  {
+    "id": 177,
+    "question": "Trong bài toán phân loại, Accuracy (Độ chính xác) được tính như thế nào?",
+    "options": [
+      "Số mẫu dự đoán đúng / Tổng số mẫu",
+      "True Positive / (True Positive + False Positive)",
+      "True Positive / (True Positive + False Negative)",
+      "2 * (Precision * Recall) / (Precision + Recall)"
+    ],
+    "answer": 0,
+    "explanation": "Accuracy là tỷ lệ các dự đoán đúng trên toàn bộ tập kiểm thử: (TP + TN) / (TP + TN + FP + FN)."
+  },
+  {
+    "id": 138,
+    "question": "Khi gặp một giá trị thuộc tính chưa từng xuất hiện trong tập huấn luyện (Xác suất bằng 0), Naive Bayes sẽ gặp lỗi gì và cách khắc phục?",
+    "options": [
+      "Missing Value / Khắc phục bằng Mean",
+      "Underfitting / Khắc phục bằng K-Fold",
+      "Overfitting / Khắc phục bằng Pruning",
+      "Zero Probability / Khắc phục bằng Laplace Smoothing"
+    ],
+    "answer": 3,
+    "explanation": "Khi một xác suất bằng 0, do phép nhân nên toàn bộ likelihood bằng 0. Laplace Smoothing (+1 vào tử số) được dùng để giải quyết."
+  },
+  {
+    "id": 114,
+    "question": "Trong thuật toán ID3 tạo Cây quyết định, thuộc tính nào sẽ được chọn làm Nút Gốc (Root Node)?",
+    "options": [
+      "Thuộc tính có Information Gain LỚN NHẤT",
+      "Thuộc tính có ít giá trị phân biệt nhất",
+      "Thuộc tính có Information Gain NHỎ NHẤT",
+      "Thuộc tính có Entropy LỚN NHẤT"
+    ],
+    "answer": 0,
+    "explanation": "Thuật toán sẽ tham lam chọn thuộc tính mang lại Độ lợi thông tin lớn nhất để chia nhanh nhất các tập thành tinh khiết."
+  },
+  {
+    "id": 166,
+    "question": "Thuật toán Naive Bayes dựa trên định lý toán học nào?",
+    "options": [
+      "Định lý Bayes",
+      "Bất đẳng thức Markov",
+      "Định lý Pytago",
+      "Định luật Số lớn"
+    ],
+    "answer": 0,
+    "explanation": "Thuật toán Naive Bayes ứng dụng Định lý Bayes về xác suất có điều kiện P(A|B) = [P(B|A) * P(A)] / P(B)."
+  },
+  {
+    "id": 111,
+    "question": "Entropy của một tập dữ liệu đạt giá trị LỚN NHẤT khi nào?",
+    "options": [
+      "Khi cây không thể phân nhánh được nữa",
+      "Khi số lượng mẫu bằng 0",
+      "Khi tập dữ liệu chỉ chứa mẫu của một lớp duy nhất",
+      "Khi số lượng mẫu của các lớp bằng nhau hoàn toàn"
+    ],
+    "answer": 3,
+    "explanation": "Entropy đo lường sự hỗn loạn. Hỗn loạn lớn nhất (Entropy tối đa = 1 đối với bài toán nhị phân) khi tỷ lệ các lớp là 50/50."
+  },
+  {
+    "id": 132,
+    "question": "Chữ 'Naive' (Ngây thơ) trong Naive Bayes ngụ ý điều gì?",
+    "options": [
+      "Giả định các thuộc tính đầu vào là Độc lập có điều kiện với nhau",
+      "Thuật toán luôn đưa ra xác suất sai",
+      "Nó chỉ dùng cho các bài toán dễ",
+      "Thuật toán này rất đơn giản để lập trình"
+    ],
+    "answer": 0,
+    "explanation": "Mô hình này 'ngây thơ' giả định rằng sự xuất hiện của một thuộc tính không ảnh hưởng đến các thuộc tính khác khi đã biết nhãn (Độc lập có điều kiện)."
+  },
+  {
+    "id": 194,
+    "question": "Một Confusion Matrix (Ma trận nhầm lẫn) của bài toán phân loại nhị phân có kích thước là bao nhiêu?",
+    "options": [
+      "2x2",
+      "3x3",
+      "1x2",
+      "Nhiều chiều tùy dữ liệu"
+    ],
+    "answer": 0,
+    "explanation": "Bài toán nhị phân có 2 lớp (Positive, Negative) nên ma trận có kích thước 2x2 chứa TP, TN, FP, FN."
+  },
+  {
+    "id": 168,
+    "question": "Khi gặp một giá trị thuộc tính chưa từng xuất hiện trong tập huấn luyện (Xác suất bằng 0), Naive Bayes sẽ gặp lỗi gì và cách khắc phục?",
+    "options": [
+      "Missing Value / Khắc phục bằng Mean",
+      "Underfitting / Khắc phục bằng K-Fold",
+      "Overfitting / Khắc phục bằng Pruning",
+      "Zero Probability / Khắc phục bằng Laplace Smoothing"
+    ],
+    "answer": 3,
+    "explanation": "Khi một xác suất bằng 0, do phép nhân nên toàn bộ likelihood bằng 0. Laplace Smoothing (+1 vào tử số) được dùng để giải quyết."
+  },
+  {
+    "id": 176,
+    "question": "Một Confusion Matrix (Ma trận nhầm lẫn) của bài toán phân loại nhị phân có kích thước là bao nhiêu?",
+    "options": [
+      "Nhiều chiều tùy dữ liệu",
+      "2x2",
+      "3x3",
+      "1x2"
+    ],
+    "answer": 1,
+    "explanation": "Bài toán nhị phân có 2 lớp (Positive, Negative) nên ma trận có kích thước 2x2 chứa TP, TN, FP, FN."
+  },
+  {
+    "id": 130,
+    "question": "Một tập dữ liệu D có 2 mẫu, trong đó 1 mẫu thuộc lớp YES và 1 mẫu thuộc lớp NO. Giá trị Entropy(D) là bao nhiêu?",
+    "options": [
+      "-1.0",
+      "1.0",
+      "0.0",
+      "0.5"
+    ],
+    "answer": 1,
+    "explanation": "Tỷ lệ là 1/2 (50%) cho mỗi lớp. Khi xác suất bằng nhau, độ hỗn loạn đạt tối đa nên Entropy = 1."
+  },
+  {
+    "id": 73,
+    "question": "Khoảng cách Manhattan giữa điểm P(0, 0) và Q(7, 2) là bao nhiêu?",
+    "options": [
+      "7",
+      "14",
+      "7.28",
+      "9"
+    ],
+    "answer": 3,
+    "explanation": "Khoảng cách Manhattan = |7 - 0| + |2 - 0| = 9."
+  }
+]

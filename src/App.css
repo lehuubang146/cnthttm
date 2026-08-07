@@ -1,0 +1,172 @@
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.particles-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.sidebar-wrapper {
+  position: relative;
+  z-index: 20; /* High z-index for mobile drawer */
+  width: 320px;
+  background-color: #ffffff;
+  border-right: 1px solid var(--border-color);
+  padding: 2.5rem 1.5rem;
+  box-shadow: 4px 0 15px rgba(0,0,0,0.03);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100vh;
+}
+
+.sidebar-closed {
+  transform: translateX(-100%);
+  position: absolute;
+}
+
+.sidebar-open {
+  transform: translateX(0);
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+
+.sidebar-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--accent-color);
+  letter-spacing: -0.5px;
+  margin-bottom: 0;
+}
+
+.menu-toggle-btn {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 15;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-color);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: all 0.2s;
+  backdrop-filter: blur(4px);
+}
+
+.menu-toggle-btn:hover {
+  background: #f3f4f6;
+}
+
+.close-sidebar-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.close-sidebar-btn:hover {
+  background-color: #f3f4f6;
+  color: #1f2937;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 10;
+  flex: 1;
+  padding: 3rem;
+  overflow-y: auto;
+  background-color: #f9fafb;
+  height: 100vh;
+  transition: padding-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Adjust padding when sidebar is closed to give room for the toggle button */
+.app-container:has(.sidebar-closed) .content-wrapper {
+  padding-left: 3rem;
+}
+
+.content-card {
+  background: white;
+  border-radius: 16px;
+  padding: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+/* Sidebar overlay for mobile */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 15;
+  backdrop-filter: blur(2px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar-overlay.show {
+  display: block;
+  opacity: 1;
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+@media (max-width: 768px) {
+  .sidebar-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 30; /* Above everything on mobile */
+    width: 280px;
+    padding: 1.5rem 1rem;
+  }
+
+  .content-wrapper {
+    padding: 4.5rem 1rem 2rem 1rem !important; /* Make room for toggle btn at top */
+  }
+
+  .content-card {
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+  
+  .menu-toggle-btn {
+    top: 0.75rem;
+    left: 0.75rem;
+    z-index: 20;
+  }
+  
+  .app-container:has(.sidebar-open) .sidebar-overlay {
+    display: block;
+    opacity: 1;
+  }
+}
