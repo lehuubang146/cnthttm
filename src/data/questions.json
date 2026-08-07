@@ -255,10 +255,10 @@
     "id": 57,
     "question": "Khoảng cách Euclidean giữa hai điểm A(x1, y1) và B(x2, y2) là:",
     "options": [
-      "((x1 - x2) + (y1 - y2))^2",
+      "((x1 - x2) + (y1 - y2))²",
       "|x1 - x2| + |y1 - y2|",
       "x1*x2 + y1*y2",
-      "Căn bậc hai của ((x1 - x2)^2 + (y1 - y2)^2)"
+      "Căn bậc hai của ((x1 - x2)² + (y1 - y2)²)"
     ],
     "answer": 3,
     "explanation": "Khoảng cách Euclidean đo độ dài đường thẳng trực tiếp giữa 2 điểm, dùng định lý Pytago."
@@ -423,7 +423,7 @@
     "id": 61,
     "question": "Khoảng cách Manhattan giữa hai điểm A(x1, y1) và B(x2, y2) được tính bằng công thức nào?",
     "options": [
-      "sqrt((x1 - x2)^2 + (y1 - y2)^2)",
+      "√((x1 - x2)² + (y1 - y2)²)",
       "|x1 - x2| + |y1 - y2|",
       "max(|x1 - x2|, |y1 - y2|)",
       "(x1*x2 + y1*y2)"
@@ -521,8 +521,8 @@
     "options": [
       "|x1 - x2| + |y1 - y2|",
       "x1*x2 + y1*y2",
-      "Căn bậc hai của ((x1 - x2)^2 + (y1 - y2)^2)",
-      "((x1 - x2) + (y1 - y2))^2"
+      "Căn bậc hai của ((x1 - x2)² + (y1 - y2)²)",
+      "((x1 - x2) + (y1 - y2))²"
     ],
     "answer": 2,
     "explanation": "Khoảng cách Euclidean đo độ dài đường thẳng trực tiếp giữa 2 điểm, dùng định lý Pytago."
@@ -616,7 +616,7 @@
     "question": "Khoảng cách Manhattan giữa hai điểm A(x1, y1) và B(x2, y2) được tính bằng công thức nào?",
     "options": [
       "|x1 - x2| + |y1 - y2|",
-      "sqrt((x1 - x2)^2 + (y1 - y2)^2)",
+      "√((x1 - x2)² + (y1 - y2)²)",
       "max(|x1 - x2|, |y1 - y2|)",
       "(x1*x2 + y1*y2)"
     ],
@@ -832,9 +832,9 @@
     "question": "Khoảng cách Euclidean giữa hai điểm A(x1, y1) và B(x2, y2) là:",
     "options": [
       "x1*x2 + y1*y2",
-      "((x1 - x2) + (y1 - y2))^2",
+      "((x1 - x2) + (y1 - y2))²",
       "|x1 - x2| + |y1 - y2|",
-      "Căn bậc hai của ((x1 - x2)^2 + (y1 - y2)^2)"
+      "Căn bậc hai của ((x1 - x2)² + (y1 - y2)²)"
     ],
     "answer": 3,
     "explanation": "Khoảng cách Euclidean đo độ dài đường thẳng trực tiếp giữa 2 điểm, dùng định lý Pytago."
@@ -1012,7 +1012,7 @@
     "question": "Khoảng cách Manhattan giữa hai điểm A(x1, y1) và B(x2, y2) được tính bằng công thức nào?",
     "options": [
       "|x1 - x2| + |y1 - y2|",
-      "sqrt((x1 - x2)^2 + (y1 - y2)^2)",
+      "√((x1 - x2)² + (y1 - y2)²)",
       "max(|x1 - x2|, |y1 - y2|)",
       "(x1*x2 + y1*y2)"
     ],
@@ -1025,7 +1025,7 @@
     "options": [
       "max(|x1 - x2|, |y1 - y2|)",
       "|x1 - x2| + |y1 - y2|",
-      "sqrt((x1 - x2)^2 + (y1 - y2)^2)",
+      "√((x1 - x2)² + (y1 - y2)²)",
       "(x1*x2 + y1*y2)"
     ],
     "answer": 1,
@@ -1084,7 +1084,7 @@
     "question": "Khoảng cách Manhattan giữa hai điểm A(x1, y1) và B(x2, y2) được tính bằng công thức nào?",
     "options": [
       "|x1 - x2| + |y1 - y2|",
-      "sqrt((x1 - x2)^2 + (y1 - y2)^2)",
+      "√((x1 - x2)² + (y1 - y2)²)",
       "max(|x1 - x2|, |y1 - y2|)",
       "(x1*x2 + y1*y2)"
     ],
@@ -1204,7 +1204,7 @@
     "question": "Khoảng cách Manhattan giữa hai điểm A(x1, y1) và B(x2, y2) được tính bằng công thức nào?",
     "options": [
       "|x1 - x2| + |y1 - y2|",
-      "sqrt((x1 - x2)^2 + (y1 - y2)^2)",
+      "√((x1 - x2)² + (y1 - y2)²)",
       "max(|x1 - x2|, |y1 - y2|)",
       "(x1*x2 + y1*y2)"
     ],
@@ -1239,9 +1239,9 @@
     "id": 52,
     "question": "Khoảng cách Euclidean giữa hai điểm A(x1, y1) và B(x2, y2) là:",
     "options": [
-      "Căn bậc hai của ((x1 - x2)^2 + (y1 - y2)^2)",
+      "Căn bậc hai của ((x1 - x2)² + (y1 - y2)²)",
       "|x1 - x2| + |y1 - y2|",
-      "((x1 - x2) + (y1 - y2))^2",
+      "((x1 - x2) + (y1 - y2))²",
       "x1*x2 + y1*y2"
     ],
     "answer": 0,
@@ -1661,8 +1661,8 @@
     "options": [
       "x1*x2 + y1*y2",
       "|x1 - x2| + |y1 - y2|",
-      "Căn bậc hai của ((x1 - x2)^2 + (y1 - y2)^2)",
-      "((x1 - x2) + (y1 - y2))^2"
+      "Căn bậc hai của ((x1 - x2)² + (y1 - y2)²)",
+      "((x1 - x2) + (y1 - y2))²"
     ],
     "answer": 2,
     "explanation": "Khoảng cách Euclidean đo độ dài đường thẳng trực tiếp giữa 2 điểm, dùng định lý Pytago."
@@ -1863,10 +1863,10 @@
     "id": 42,
     "question": "Khoảng cách Euclidean giữa hai điểm A(x1, y1) và B(x2, y2) là:",
     "options": [
-      "((x1 - x2) + (y1 - y2))^2",
+      "((x1 - x2) + (y1 - y2))²",
       "x1*x2 + y1*y2",
       "|x1 - x2| + |y1 - y2|",
-      "Căn bậc hai của ((x1 - x2)^2 + (y1 - y2)^2)"
+      "Căn bậc hai của ((x1 - x2)² + (y1 - y2)²)"
     ],
     "answer": 3,
     "explanation": "Khoảng cách Euclidean đo độ dài đường thẳng trực tiếp giữa 2 điểm, dùng định lý Pytago."
