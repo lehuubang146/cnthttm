@@ -59,6 +59,12 @@ const SolutionDe2 = () => {
             </tbody>
           </table>
           <p>Một khách hàng mới P có thông tin: P = (Orders = 15, Discount = 30).</p>
+          <p><strong>Yêu cầu:</strong></p>
+          <ol style={{ paddingLeft: '1.5rem', marginBottom: 0 }}>
+            <li><strong>Tiền xử lý dữ liệu (Min-Max Scaling):</strong> Hãy chuẩn hóa toàn bộ dữ liệu của 6 khách hàng cũ và khách hàng mới P về đoạn [0, 1] bằng phương pháp Min-Max.</li>
+            <li><strong>Tính toán khoảng cách:</strong> Tính khoảng cách Manhattan từ khách hàng P (sau khi chuẩn hóa) đến 6 khách hàng trong tập huấn luyện (sau khi chuẩn hóa).</li>
+            <li><strong>Phân lớp:</strong> Tiến hành dự đoán nhãn Subscribe cho khách hàng P trong hai trường hợp: Với k = 3 và Với k = 5.</li>
+          </ol>
         </div>
 
         <h4>BÀI GIẢI NHANH (Trình bày ra giấy)</h4>
@@ -131,6 +137,12 @@ const SolutionDe2 = () => {
               <tr><td style={{ padding: '0.5rem' }}>HS8</td><td style={{ padding: '0.5rem' }}>Standard</td><td style={{ padding: '0.5rem' }}>Night</td><td style={{ padding: '0.5rem' }}>yes</td></tr>
             </tbody>
           </table>
+          <p><strong>Yêu cầu:</strong></p>
+          <ol style={{ paddingLeft: '1.5rem', marginBottom: 0 }}>
+            <li>Tính Entropy của tập dữ liệu ban đầu S.</li>
+            <li>Tính Information Gain cho hai thuộc tính: Gain(S, Vehicle_Type) và Gain(S, Time_Of_Day).</li>
+            <li>Xác định thuộc tính nào được chọn làm nút gốc và vẽ sơ đồ phân nhánh tại nút gốc đó.</li>
+          </ol>
         </div>
 
         <h4>BÀI GIẢI NHANH (Trình bày ra giấy)</h4>
@@ -241,6 +253,12 @@ const SolutionDe2 = () => {
             </tbody>
           </table>
           <p>Một giao dịch mới phát sinh Q có thông tin: Q = (Location = Foreign, Amount = 30).</p>
+          <p><strong>Yêu cầu:</strong></p>
+          <ol style={{ paddingLeft: '1.5rem', marginBottom: 0 }}>
+            <li><strong>Lập bảng thống kê tham số:</strong> Lập bảng thống kê chia làm hai phần rõ rệt (Tần số chữ và Tham số Mean/Std Dev số).</li>
+            <li><strong>Tính toán độ khả dĩ (Likelihood):</strong> Sử dụng hàm mật độ xác suất Gauss, tính Likelihood(yes) và Likelihood(no) cho giao dịch Q.</li>
+            <li><strong>Kết luận:</strong> Chuẩn hóa giá trị về % và đưa ra phán quyết cuối cùng của mô hình.</li>
+          </ol>
         </div>
 
         <h4>BÀI GIẢI NHANH (Trình bày ra giấy)</h4>
