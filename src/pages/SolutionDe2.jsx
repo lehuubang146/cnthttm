@@ -72,16 +72,28 @@ const SolutionDe2 = () => {
             <li style={{ marginTop: '0.5rem', color: '#059669', fontWeight: '500' }}>→ P mới (sau chuẩn hóa) = (0.4, 0.5)</li>
           </ul>
 
-          <p style={{ marginTop: '1.5rem' }}><strong>2. Tính toán khoảng cách (Manhattan)</strong></p>
-          <ul style={{ listStyleType: 'none', paddingLeft: '1rem' }}>
-            <li><i>(Công thức: <span style={codeStyle}>d = |x1 - x2| + |y1 - y2|</span>)</i></li>
-            <li>• KH1 (0, 0): <span style={codeStyle}>d = |0.4 - 0| + |0.5 - 0| = 0.9</span> → Hạng 6</li>
-            <li>• KH2 (0.8, 0.75): <span style={codeStyle}>d = |0.4 - 0.8| + |0.5 - 0.75| = 0.65</span> → Hạng 3</li>
-            <li>• KH3 (0.2, 0.25): <span style={codeStyle}>d = |0.4 - 0.2| + |0.5 - 0.25| = 0.45</span> → <strong>Hạng 1</strong> (đồng hạng)</li>
-            <li>• KH4 (0.6, 1): <span style={codeStyle}>d = |0.4 - 0.6| + |0.5 - 1| = 0.7</span> → Hạng 4</li>
-            <li>• KH5 (0, 0.5): <span style={codeStyle}>d = |0.4 - 0| + |0.5 - 0.5| = 0.4</span> → <strong>Hạng 1</strong> (đồng hạng)</li>
-            <li>• KH6 (1, 0.25): <span style={codeStyle}>d = |0.4 - 1| + |0.5 - 0.25| = 0.85</span> → Hạng 5</li>
-          </ul>
+          <p style={{ marginTop: '1.5rem' }}><strong>2. Bảng chuẩn hóa dữ liệu & Tính toán khoảng cách (Manhattan)</strong></p>
+          <p style={{ paddingLeft: '1rem', fontStyle: 'italic', marginBottom: '0.5rem' }}>Công thức khoảng cách: <span style={codeStyle}>d = |x1 - x2| + |y1 - y2|</span></p>
+          <table style={{ width: '100%', marginBottom: '1rem', borderCollapse: 'collapse', textAlign: 'left', border: '1px solid #e2e8f0' }}>
+            <thead>
+              <tr style={{ borderBottom: '2px solid #cbd5e1', backgroundColor: '#f1f5f9' }}>
+                <th style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>Khách hàng</th>
+                <th style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>Orders (Min-Max)</th>
+                <th style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>Discount (Min-Max)</th>
+                <th style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>Khoảng cách d (so với P)</th>
+                <th style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>Hạng</th>
+                <th style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>Subscribe</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>KH1</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.0</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.0</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.9</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>6</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>No</td></tr>
+              <tr><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>KH2</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.8</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.75</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.65</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>3</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>Yes</td></tr>
+              <tr style={{ backgroundColor: '#f0fdf4' }}><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0', fontWeight: 'bold' }}>KH3</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.2</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.25</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0', fontWeight: 'bold', color: '#16a34a' }}>0.45</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0', fontWeight: 'bold' }}>2</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>No</td></tr>
+              <tr><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>KH4</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.6</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>1.0</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.7</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>4</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>Yes</td></tr>
+              <tr style={{ backgroundColor: '#f0fdf4' }}><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0', fontWeight: 'bold' }}>KH5</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.0</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.5</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0', fontWeight: 'bold', color: '#16a34a' }}>0.4</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0', fontWeight: 'bold' }}>1</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>No</td></tr>
+              <tr><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>KH6</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>1.0</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.25</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.85</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>5</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>Yes</td></tr>
+            </tbody>
+          </table>
 
           <p style={{ marginTop: '1.5rem' }}><strong>3. Phân lớp</strong></p>
           <ul style={{ listStyleType: 'none', paddingLeft: '1rem' }}>
@@ -228,28 +240,30 @@ const SolutionDe2 = () => {
             <li style={{ marginTop: '0.5rem' }}><strong>* Xét nhãn lớp YES:</strong></li>
             <li>• Xác suất Location (Foreign): <span style={codeStyle}>P(Foreign|Yes) = 2/3</span></li>
             <li>• Amount (Mean μ): <span style={codeStyle}>μ_yes = (45 + 55 + 65) / 3 = 55</span></li>
-            <li>• Amount (Std Dev σ): <span style={codeStyle}>σ_yes = √(((45-55)² + (55-55)² + (65-55)²) / 3) = √(200/3) ≈ 8.165</span></li>
+            <li>• Amount (Phương sai mẫu σ² chia n-1): <span style={codeStyle}>σ²_yes = ((45-55)² + (55-55)² + (65-55)²) / (3-1) = 200 / 2 = 100</span></li>
+            <li>• Amount (Std Dev σ): <span style={codeStyle}>σ_yes = √100 = 10</span></li>
             
             <li style={{ marginTop: '0.5rem' }}><strong>* Xét nhãn lớp NO:</strong></li>
             <li>• Xác suất Location (Foreign): <span style={codeStyle}>P(Foreign|No) = 1/3</span></li>
             <li>• Amount (Mean μ): <span style={codeStyle}>μ_no = (5 + 15 + 10) / 3 = 10</span></li>
-            <li>• Amount (Std Dev σ): <span style={codeStyle}>σ_no = √(((5-10)² + (15-10)² + (10-10)²) / 3) = √(50/3) ≈ 4.082</span></li>
+            <li>• Amount (Phương sai mẫu σ² chia n-1): <span style={codeStyle}>σ²_no = ((5-10)² + (15-10)² + (10-10)²) / (3-1) = 50 / 2 = 25</span></li>
+            <li>• Amount (Std Dev σ): <span style={codeStyle}>σ_no = √25 = 5</span></li>
           </ul>
 
           <p style={{ marginTop: '1.5rem' }}><strong>2. Tính Likelihood cho giao dịch Q(Foreign, 30)</strong></p>
           <ul style={{ listStyleType: 'none', paddingLeft: '1rem' }}>
             <li><i>(Áp dụng hàm mật độ xác suất Gauss cho P(Amount=30))</i></li>
-            <li>• <span style={codeStyle}>P(30|μ=55, σ=8.165) ≈ 0.00045</span></li>
-            <li>• <span style={codeStyle}>P(30|μ=10, σ=4.082) ≈ 0.0000003</span></li>
-            <li style={{ marginTop: '0.5rem' }}>• <strong>Likelihood(Yes)</strong> = P(Yes) × P(Foreign|Yes) × P(30|Yes)<br/>   = (3/6) × (2/3) × 0.00045 = <strong>0.00015</strong></li>
-            <li>• <strong>Likelihood(No)</strong> = P(No) × P(Foreign|No) × P(30|No)<br/>   = (3/6) × (1/3) × 0.0000003 ≈ <strong>0.00000005</strong></li>
+            <li>• <span style={codeStyle}>P(30|μ=55, σ=10) = (1 / 10√2π) × e^(-(30-55)² / 2×100) ≈ 0.00175</span></li>
+            <li>• <span style={codeStyle}>P(30|μ=10, σ=5) = (1 / 5√2π) × e^(-(30-10)² / 2×25) ≈ 0.000027</span></li>
+            <li style={{ marginTop: '0.5rem' }}>• <strong>Likelihood(Yes)</strong> = P(Yes) × P(Foreign|Yes) × P(30|Yes)<br/>   = 0.5 × (2/3) × 0.00175 = <strong>0.000583</strong></li>
+            <li>• <strong>Likelihood(No)</strong> = P(No) × P(Foreign|No) × P(30|No)<br/>   = 0.5 × (1/3) × 0.000027 = <strong>0.0000045</strong></li>
           </ul>
 
           <p style={{ marginTop: '1.5rem' }}><strong>3. Kết luận</strong></p>
           <ul style={{ listStyleType: 'none', paddingLeft: '1rem' }}>
-            <li>Tổng = 0.00015 + 0.00000005 = 0.00015005</li>
-            <li>• Xác suất Yes: 0.00015 / 0.00015005 ≈ <strong>99.9%</strong></li>
-            <li>• Xác suất No: 0.00000005 / 0.00015005 ≈ <strong>0.1%</strong></li>
+            <li>Tổng = 0.000583 + 0.0000045 = 0.0005875</li>
+            <li>• Xác suất Yes: 0.000583 / 0.0005875 ≈ <strong>99.23%</strong></li>
+            <li>• Xác suất No: 0.0000045 / 0.0005875 ≈ <strong>0.77%</strong></li>
             <li style={{ marginTop: '0.5rem', color: '#2563eb', fontWeight: 'bold' }}>→ Phán quyết: YES (Giao dịch lừa đảo)</li>
           </ul>
 
@@ -259,9 +273,9 @@ const SolutionDe2 = () => {
             </summary>
             <div style={{ marginTop: '1rem', fontSize: '0.95rem', color: '#334155', lineHeight: '1.6' }}>
                <p><strong>1. Tại sao dùng phân phối Gauss cho Amount?</strong><br/>Vì <code>Amount</code> là số tiền (một biến số thực liên tục), ta không thể đếm tỷ lệ xuất hiện chính xác của một giá trị cụ thể như 30 giống như cách ta đếm các cột chữ (Local/Foreign). Thay vào đó, ta giả sử Amount tuân theo quy luật phân phối chuẩn (đường cong hình quả chuông). Để vẽ được cái chuông đó, ta cần tính Trung bình (μ) và Độ lệch chuẩn (σ) của nhóm Yes và nhóm No.</p>
-               <p><strong>2. Tại sao lại phân 2 nhóm để tính?</strong><br/>Thuật toán Naive Bayes hoạt động bằng cách xem xét "Nếu đây là một giao dịch lừa đảo (Yes), thì nó thường có số tiền và địa điểm như thế nào?". Ta lấy riêng những giao dịch Yes ra để tính xem điểm trung bình của nhóm này là bao nhiêu (μ_yes = 55), và độ biến động là bao nhiêu (σ_yes = 8.165). Ta làm tương tự với nhóm Không lừa đảo (No).</p>
-               <p><strong>3. Độ khả dĩ (Likelihood) ở đây nói lên điều gì?</strong><br/>Khi khách hàng Q có giao dịch ở mức 30, ta thấy số 30 nằm gần với trung bình của nhóm lừa đảo (55) hơn là nhóm không lừa đảo (10). Khác biệt là rất lớn. Do đó, khi tính bằng hàm Gauss, xác suất rơi vào nhóm Yes (0.00045) cao hơn rất nhiều so với nhóm No (0.0000003). Kết hợp thêm với yếu tố địa điểm Foreign, Likelihood của Yes ra cao vượt trội.</p>
-               <p><strong>4. Bước chuẩn hóa cuối cùng:</strong><br/>Xác suất thô (Likelihood) không bao giờ cộng lại bằng 1. Để ra được tỷ lệ phần trăm dễ hiểu, ta lấy từng số chia cho tổng hai số. Kết quả 99.9% là một lời khẳng định cực kỳ đanh thép của mô hình thuật toán rằng giao dịch này chắc chắn là lừa đảo (YES).</p>
+               <p><strong>2. Tại sao lại phân 2 nhóm để tính?</strong><br/>Thuật toán Naive Bayes hoạt động bằng cách xem xét "Nếu đây là một giao dịch lừa đảo (Yes), thì nó thường có số tiền và địa điểm như thế nào?". Ta lấy riêng những giao dịch Yes ra để tính xem điểm trung bình của nhóm này là bao nhiêu (μ_yes = 55), và độ biến động là bao nhiêu (σ_yes = 10). Ta làm tương tự với nhóm Không lừa đảo (No).</p>
+               <p><strong>3. Độ khả dĩ (Likelihood) ở đây nói lên điều gì?</strong><br/>Khi khách hàng Q có giao dịch ở mức 30, ta thấy số 30 nằm gần với trung bình của nhóm lừa đảo (55) hơn là nhóm không lừa đảo (10). Do đó, khi tính bằng hàm Gauss, xác suất rơi vào nhóm Yes (0.00175) cao hơn rất nhiều so với nhóm No (0.000027). Kết hợp thêm với yếu tố địa điểm Foreign, Likelihood của Yes ra cao vượt trội.</p>
+               <p><strong>4. Bước chuẩn hóa cuối cùng:</strong><br/>Xác suất thô (Likelihood) không bao giờ cộng lại bằng 1. Để ra được tỷ lệ phần trăm dễ hiểu, ta lấy từng số chia cho tổng hai số. Kết quả 99.23% là một lời khẳng định cực kỳ đanh thép của mô hình thuật toán rằng giao dịch này chắc chắn là lừa đảo (YES).</p>
             </div>
           </details>
         </div>

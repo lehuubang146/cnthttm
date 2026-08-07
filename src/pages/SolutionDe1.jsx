@@ -80,16 +80,28 @@ const SolutionDe1 = () => {
             <li style={{ marginTop: '0.5rem', color: '#059669', fontWeight: '500' }}>→ M mới (sau chuẩn hóa) = (0.4167, 0.6)</li>
           </ul>
 
-          <p style={{ marginTop: '1.5rem' }}><strong>2. Tính toán khoảng cách (Euclidean)</strong></p>
-          <ul style={{ listStyleType: 'none', paddingLeft: '1rem' }}>
-            <li><i>(Công thức: <span style={codeStyle}>d = √((x1 - x2)² + (y1 - y2)²)</span>)</i></li>
-            <li>• KH1 (0.0833, 0.6): <span style={codeStyle}>d = √((0.4167 - 0.0833)² + (0.6 - 0.6)²) = 0.3333</span> → Hạng 2</li>
-            <li>• KH2 (0.8333, 1.0): <span style={codeStyle}>d = √((0.4167 - 0.8333)² + (0.6 - 1.0)²) = 0.5776</span> → Hạng 3</li>
-            <li>• KH3 (0.2500, 0.0): <span style={codeStyle}>d = √((0.4167 - 0.2500)² + (0.6 - 0.0)²) = 0.6227</span> → Hạng 5</li>
-            <li>• KH4 (0.5833, 0.8): <span style={codeStyle}>d = √((0.4167 - 0.5833)² + (0.6 - 0.8)²) = 0.2603</span> → <strong>Hạng 1</strong> (Gần nhất)</li>
-            <li>• KH5 (0.0000, 1.0): <span style={codeStyle}>d = √((0.4167 - 0.0000)² + (0.6 - 1.0)²) = 0.5776</span> → Hạng 4</li>
-            <li>• KH6 (1.0000, 0.2): <span style={codeStyle}>d = √((0.4167 - 1.0000)² + (0.6 - 0.2)²) = 0.7073</span> → Hạng 6</li>
-          </ul>
+          <p style={{ marginTop: '1.5rem' }}><strong>2. Bảng chuẩn hóa dữ liệu & Tính toán khoảng cách (Euclidean)</strong></p>
+          <p style={{ paddingLeft: '1rem', fontStyle: 'italic', marginBottom: '0.5rem' }}>Công thức khoảng cách: <span style={codeStyle}>d = √((x1 - x2)² + (y1 - y2)²)</span></p>
+          <table style={{ width: '100%', marginBottom: '1rem', borderCollapse: 'collapse', textAlign: 'left', border: '1px solid #e2e8f0' }}>
+            <thead>
+              <tr style={{ borderBottom: '2px solid #cbd5e1', backgroundColor: '#f1f5f9' }}>
+                <th style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>Khách hàng</th>
+                <th style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>Months (Min-Max)</th>
+                <th style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>Weekly (Min-Max)</th>
+                <th style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>Khoảng cách d (so với M)</th>
+                <th style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>Hạng</th>
+                <th style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>VIP_Renewal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>KH1</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.0833</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.6</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.3334</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>2</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>No</td></tr>
+              <tr><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>KH2</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.8333</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>1.0</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.5775</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>3</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>Yes</td></tr>
+              <tr><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>KH3</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.2500</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.0</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.6227</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>5</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>No</td></tr>
+              <tr style={{ backgroundColor: '#f0fdf4' }}><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0', fontWeight: 'bold' }}>KH4</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.5833</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.8</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0', fontWeight: 'bold', color: '#16a34a' }}>0.2603</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0', fontWeight: 'bold' }}>1</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>Yes</td></tr>
+              <tr><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>KH5</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.0000</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>1.0</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.5776</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>4</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>No</td></tr>
+              <tr><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>KH6</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>1.0000</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.2</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>0.7072</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>6</td><td style={{ padding: '0.5rem', border: '1px solid #e2e8f0' }}>Yes</td></tr>
+            </tbody>
+          </table>
 
           <p style={{ marginTop: '1.5rem' }}><strong>3. Phân lớp</strong></p>
           <ul style={{ listStyleType: 'none', paddingLeft: '1rem' }}>
@@ -242,28 +254,30 @@ const SolutionDe1 = () => {
             <li style={{ marginTop: '0.5rem' }}><strong>* Xét nhãn lớp YES:</strong></li>
             <li>• Xác suất Degree (Master): <span style={codeStyle}>P(Master|Yes) = 2/3</span></li>
             <li>• Test_Score (Mean μ): <span style={codeStyle}>μ_yes = (85 + 90 + 95) / 3 = 90</span></li>
-            <li>• Test_Score (Std Dev σ): <span style={codeStyle}>σ_yes = √(((85-90)² + (90-90)² + (95-90)²) / 3) = √(50/3) ≈ 4.082</span></li>
+            <li>• Test_Score (Phương sai mẫu σ² chia n-1): <span style={codeStyle}>σ²_yes = ((85-90)² + (90-90)² + (95-90)²) / (3-1) = 50 / 2 = 25</span></li>
+            <li>• Test_Score (Std Dev σ): <span style={codeStyle}>σ_yes = √25 = 5</span></li>
             
             <li style={{ marginTop: '0.5rem' }}><strong>* Xét nhãn lớp NO:</strong></li>
             <li>• Xác suất Degree (Master): <span style={codeStyle}>P(Master|No) = 1/3</span></li>
             <li>• Test_Score (Mean μ): <span style={codeStyle}>μ_no = (75 + 70 + 65) / 3 = 70</span></li>
-            <li>• Test_Score (Std Dev σ): <span style={codeStyle}>σ_no = √(((75-70)² + (70-70)² + (65-70)²) / 3) = √(50/3) ≈ 4.082</span></li>
+            <li>• Test_Score (Phương sai mẫu σ² chia n-1): <span style={codeStyle}>σ²_no = ((75-70)² + (70-70)² + (65-70)²) / (3-1) = 50 / 2 = 25</span></li>
+            <li>• Test_Score (Std Dev σ): <span style={codeStyle}>σ_no = √25 = 5</span></li>
           </ul>
 
           <p style={{ marginTop: '1.5rem' }}><strong>2. Tính Likelihood cho ứng viên N(Master, 80)</strong></p>
           <ul style={{ listStyleType: 'none', paddingLeft: '1rem' }}>
             <li><i>(Áp dụng hàm mật độ xác suất Gauss cho P(Test_Score=80))</i></li>
-            <li>• <span style={codeStyle}>P(80|μ=90, σ=4.082) ≈ 0.00532</span></li>
-            <li>• <span style={codeStyle}>P(80|μ=70, σ=4.082) ≈ 0.00532</span></li>
-            <li style={{ marginTop: '0.5rem' }}>• <strong>Likelihood(Yes)</strong> = P(Yes) × P(Master|Yes) × P(80|Yes)<br/>   = (3/6) × (2/3) × 0.00532 = <strong>0.00177</strong></li>
-            <li>• <strong>Likelihood(No)</strong> = P(No) × P(Master|No) × P(80|No)<br/>   = (3/6) × (1/3) × 0.00532 = <strong>0.00089</strong></li>
+            <li>• <span style={codeStyle}>P(80|μ=90, σ=5) = (1 / 5√2π) × e^(-(80-90)² / 2×25) ≈ 0.0108</span></li>
+            <li>• <span style={codeStyle}>P(80|μ=70, σ=5) = (1 / 5√2π) × e^(-(80-70)² / 2×25) ≈ 0.0108</span></li>
+            <li style={{ marginTop: '0.5rem' }}>• <strong>Likelihood(Yes)</strong> = P(Yes) × P(Master|Yes) × P(80|Yes)<br/>   = 0.5 × (2/3) × 0.0108 = <strong>0.0036</strong></li>
+            <li>• <strong>Likelihood(No)</strong> = P(No) × P(Master|No) × P(80|No)<br/>   = 0.5 × (1/3) × 0.0108 = <strong>0.0018</strong></li>
           </ul>
 
           <p style={{ marginTop: '1.5rem' }}><strong>3. Kết luận</strong></p>
           <ul style={{ listStyleType: 'none', paddingLeft: '1rem' }}>
-            <li>Tổng = 0.00177 + 0.00089 = 0.00266</li>
-            <li>• Xác suất Yes: 0.00177 / 0.00266 ≈ <strong>66.5%</strong></li>
-            <li>• Xác suất No: 0.00089 / 0.00266 ≈ <strong>33.5%</strong></li>
+            <li>Tổng = 0.0036 + 0.0018 = 0.0054</li>
+            <li>• Xác suất Yes: 0.0036 / 0.0054 ≈ <strong>66.67%</strong></li>
+            <li>• Xác suất No: 0.0018 / 0.0054 ≈ <strong>33.33%</strong></li>
             <li style={{ marginTop: '0.5rem', color: '#2563eb', fontWeight: 'bold' }}>→ Phán quyết: YES (Được tuyển dụng)</li>
           </ul>
 
